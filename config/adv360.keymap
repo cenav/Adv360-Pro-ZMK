@@ -163,7 +163,7 @@
 
     default_layer {
         bindings = <
-    &fslbsl    &n1lbk    &n2lpa    &n3lbr    &n4sta    &n5plu   &kp K_CALC                                                                    &mo MOD     &n6prc   &n7equ   &n8rbr    &n9rpa    &n0rbk   &qmaexc
+    &fslbsl    &n1lbk    &n2lpa    &n3lbr    &n4sta    &n5plu   &none                                                                         &mo MOD     &n6prc   &n7equ   &n8rbr    &n9rpa    &n0rbk   &qmaexc
     &amppip    &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &none                                                                         &tog GAME   &kp F    &kp G    &kp C     &kp R     &kp L    &kp MINUS
     &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &tog QWERTY      &kp LCTRL   &kp LALT      &kp RALT  &kp RCTRL                &kp K_CMENU &kp D    &kp H    &kp T     &kp N     &kp S    &kp TAB
     &kp GRAVE  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                                 &kp DELETE    &kp LGUI                                       &kp B    &kp M    &kp W     &kp V     &kp Z    &kp MINUS
