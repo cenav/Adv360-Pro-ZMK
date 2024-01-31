@@ -47,121 +47,129 @@
           bindings = <&kp>, <&kp>;
       };
 
-      n1lbk: n1_lbkt {
+      l00: left_x0_y0 {
           compatible = "zmk,behavior-mod-morph";
-          label = "n1_lbkt";
-          #binding-cells = <0>;
-          bindings = <&kp N1>, <&kp LEFT_BRACKET>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n2lpa: n2_lpar {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n2_lpar";
-          #binding-cells = <0>;
-          bindings = <&kp N2>, <&kp LEFT_PARENTHESIS>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n3lbr: n3_lbrc {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n3_lbrc";
-          #binding-cells = <0>;
-          bindings = <&kp N3>, <&kp LEFT_BRACE>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n4sta: n4_star {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n4_star";
-          #binding-cells = <0>;
-          bindings = <&kp N4>, <&kp STAR>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n5plu: n5_plus {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n5_plus";
-          #binding-cells = <0>;
-          bindings = <&kp N5>, <&kp PLUS>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n6prc: n6_prcnt {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n6_prcnt";
-          #binding-cells = <0>;
-          bindings = <&kp N6>, <&kp PERCENT>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n7equ: n7_equal {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n7_equal";
-          #binding-cells = <0>;
-          bindings = <&kp N7>, <&kp EQUAL>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n8rbr: n8_rbrc {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n8_rbrc";
-          #binding-cells = <0>;
-          bindings = <&kp N8>, <&kp RIGHT_BRACE>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n9rpa: n9_rpar {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n9_rpar";
-          #binding-cells = <0>;
-          bindings = <&kp N9>, <&kp RIGHT_PARENTHESIS>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      n0rbk: n0_rbkt {
-          compatible = "zmk,behavior-mod-morph";
-          label = "n0_rbkt";
-          #binding-cells = <0>;
-          bindings = <&kp N0>, <&kp RIGHT_BRACKET>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      fslbsl: fslh_bslh {
-          compatible = "zmk,behavior-mod-morph";
-          label = "fslh_bslh";
+          label = "left_x0_y0";
           #binding-cells = <0>;
           bindings = <&kp SLASH>, <&kp BACKSLASH>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
-      qmaexc: qmark_excl {
+      l01: left_x0_y1 {
           compatible = "zmk,behavior-mod-morph";
-          label = "qmark_excl";
+          label = "left_x0_y1";
+          #binding-cells = <0>;
+          bindings = <&kp N1>, <&kp EXCLAMATION>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      l02: left_x0_y2 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "left_x0_y2";
+          #binding-cells = <0>;
+          bindings = <&kp N2>, <&kp LEFT_PARENTHESIS>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      l03: left_x0_y3 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "left_x0_y3";
+          #binding-cells = <0>;
+          bindings = <&kp N3>, <&kp LEFT_BRACE>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      l04: left_x0_y4 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "left_x0_y4";
+          #binding-cells = <0>;
+          bindings = <&kp N4>, <&kp PLUS>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      l05: left_x0_y5 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "left_x0_y5";
+          #binding-cells = <0>;
+          bindings = <&kp N5>, <&kp PLUS>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      r05: right_x0_y5 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "right_x0_y5";
+          #binding-cells = <0>;
+          bindings = <&kp N6>, <&kp PERCENT>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      r04: right_x0_y4 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "right_x0_y4";
+          #binding-cells = <0>;
+          bindings = <&kp N7>, <&kp EQUAL>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      r03: right_x0_y3 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "right_x0_y3";
+          #binding-cells = <0>;
+          bindings = <&kp N8>, <&kp RIGHT_BRACE>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      r02: right_x0_y2 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "right_x0_y2";
+          #binding-cells = <0>;
+          bindings = <&kp N9>, <&kp RIGHT_PARENTHESIS>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      r01: right_x0_y1 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "right_x0_y1";
+          #binding-cells = <0>;
+          bindings = <&kp N0>, <&kp RIGHT_BRACKET>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      l00: left_x0_y0 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "left_x0_y0";
+          #binding-cells = <0>;
+          bindings = <&kp SLASH>, <&kp BACKSLASH>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      r00: right_x0_y0 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "right_x0_y0";
           #binding-cells = <0>;
           bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
-      amppip: amps_pipe {
+      l10: left_x1_y0 {
           compatible = "zmk,behavior-mod-morph";
-          label = "amps_pipe";
+          label = "left_x1_y0";
           #binding-cells = <0>;
           bindings = <&kp AMPERSAND>, <&kp PIPE>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
-      carhas: caret_hash {
+      l41: left_x4_y1 {
           compatible = "zmk,behavior-mod-morph";
-          label = "caret_hash";
+          label = "left_x4_y1";
           #binding-cells = <0>;
           bindings = <&kp CARET>, <&kp HASH>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
-      dllat: dllr_at {
+      r41: right_x4_y1 {
           compatible = "zmk,behavior-mod-morph";
-          label = "dllr_at";
+          label = "right_x4_y1";
           #binding-cells = <0>;
           bindings = <&kp DOLLAR>, <&kp AT_SIGN>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -173,11 +181,11 @@
 
     default_layer {
       bindings = <
-        &fslbsl    &n1lbk    &n2lpa    &n3lbr    &n4sta    &n5plu   &kp K_CALC                                                                    &mo MOD     &n6prc   &n7equ   &n8rbr    &n9rpa    &n0rbk   &qmaexc
-        &amppip    &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &none                                                                         &tog GAME   &kp F    &kp G    &kp C     &kp R     &kp L    &kp MINUS
+        &l00       &l01      &l02      &l03      &l04      &l05     &kp K_CALC                                                                    &mo MOD     &r05     &r04     &r03      &r02      &r01     &r00
+        &l10       &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &none                                                                         &tog GAME   &kp F    &kp G    &kp C     &kp R     &kp L    &kp MINUS
         &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &tog QWERTY      &kp LCTRL   &kp LALT      &kp RALT  &kp RCTRL                &kp K_CMENU &kp D    &kp H    &kp T     &kp N     &kp S    &kp TAB
         &kp GRAVE  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                                 &kp DELETE    &kp LGUI                                       &kp B    &kp M    &kp W     &kp V     &kp Z    &kp MINUS
-        &mo FN     &carhas   &kp HOME  &kp LEFT  &kp RIGHT          &lt SYMBOL BSPC  &kp RSHFT   &kp INS       &kp INS   &mt LSHFT ENTER  &lt SYMBOL SPACE             &kp UP   &kp DOWN  &kp END   &dllat   &mo FN
+        &mo FN     &l41      &kp HOME  &kp LEFT  &kp RIGHT          &lt SYMBOL BSPC  &kp RSHFT   &kp INS       &kp INS   &mt LSHFT ENTER  &lt SYMBOL SPACE             &kp UP   &kp DOWN  &kp END   &r41     &mo FN
       >;
     };
         layer_fn {
