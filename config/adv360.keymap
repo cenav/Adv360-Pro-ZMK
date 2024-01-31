@@ -135,14 +135,6 @@
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
-      l00: left_x0_y0 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x0_y0";
-          #binding-cells = <0>;
-          bindings = <&kp SLASH>, <&kp BACKSLASH>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
       r00: right_x0_y0 {
           compatible = "zmk,behavior-mod-morph";
           label = "right_x0_y0";
