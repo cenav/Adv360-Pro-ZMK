@@ -131,7 +131,7 @@
           compatible = "zmk,behavior-mod-morph";
           label = "right_x0_y1";
           #binding-cells = <0>;
-          bindings = <&kp N0>, <&kp AT_SIGN>;
+          bindings = <&kp N0>, <&kp QUESTION>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -139,7 +139,7 @@
           compatible = "zmk,behavior-mod-morph";
           label = "right_x0_y0";
           #binding-cells = <0>;
-          bindings = <&kp QUESTION>, <&kp PERCENT>;
+          bindings = <&kp PERCENT>, <&kp AT_SIGN>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
