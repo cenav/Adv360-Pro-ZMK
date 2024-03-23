@@ -223,7 +223,7 @@
 
     layer_game {
         bindings = <
-    &kp ESC     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5   &kp HOME                                                    &none      &kp N6  &kp N7    &kp N8     &kp N9     &kp N0  &none
+    &kp ESC     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5   &kp N6                                                    &none      &kp N6  &kp N7    &kp N8     &kp N9     &kp N0  &none
     &kp TAB     &kp Q     &kp W     &kp E      &kp R   &kp T    &kp Y                                                       &tog GAME  &none   &none     &none      &none      &none   &none
     &kp BSPC    &kp A     &kp S     &kp D      &kp F   &kp G    &kp H         &kp LCTRL &kp LALT   &kp LGUI   &kp RCTRL     &none      &none   &none     &none      &none      &none   &none
     &kp INS     &kp Z     &kp X     &kp C      &kp V   &kp B                            &kp END    &kp PG_UP                           &none   &none     &none      &none      &none   &none
@@ -237,7 +237,7 @@
     &trans  &trans  &trans     &trans    &trans    &trans   &trans                                               &none  &none  &none  &none  &none  &none  &none
     &trans  &trans  &kp GRAVE  &kp SEMI  &kp SQT   &trans   &trans         &none      &none   &none  &none       &none  &none  &none  &none  &none  &none  &none
     &trans  &trans  &trans     &trans    &trans    &trans                             &none   &none                     &none  &none  &none  &none  &none  &none
-    &trans  &trans  &trans     &kp PG_UP &kp PG_DN              &kp SPACE  &kp ENTER  &none   &none  &none  &none              &none  &none  &none  &none  &none
+    &trans  &trans  &trans     &kp PG_UP &kp PG_DN              &kp SPACE  &kp HOME   &none   &none  &none  &none              &none  &none  &none  &none  &none
         >;
     };
 
