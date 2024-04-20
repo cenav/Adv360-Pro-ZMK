@@ -15,62 +15,6 @@
 #define AS(keycode) &as LS(keycode) keycode
 
 
-//
-// THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-// for the thumbs (which are assigned to 6 layers in the Miryoku system).
-//
-// NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-// activation for the symbol layer (if the tapped symbol key is released
-// while the thumb layer key is still held down) for quicker programming.
-//
-#ifndef THUMB_HOLDING_TYPE
-#define THUMB_HOLDING_TYPE "balanced"
-#endif
-
-//
-// THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
-// a thumb key to activate a layer.  Shorter holds are treated as taps.
-//
-#ifndef THUMB_HOLDING_TIME
-#define THUMB_HOLDING_TIME 200
-#endif
-
-//
-// THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
-// after tapping a key to hold it again in order to make it auto-repeat.
-//
-#ifndef THUMB_REPEAT_DECAY
-#define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-#endif
-
-//
-// SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-// for spacebar (assigned to the right thumb's home position by default).
-//
-// NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-// activation for the symbol layer (if the tapped symbol key is released
-// while the thumb layer key is still held down) for quicker programming.
-//
-#ifndef SPACE_HOLDING_TYPE
-#define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
-#endif
-
-//
-// SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
-// the space thumb key to activate.  Shorter holds are treated as taps.
-//
-#ifndef SPACE_HOLDING_TIME
-#define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
-#endif
-
-//
-// SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
-// after tapping a key to hold it again in order to make it auto-repeat.
-//
-#ifndef SPACE_REPEAT_DECAY
-#define SPACE_REPEAT_DECAY 150
-#endif
-
 / {
     behaviors {
       #include "macros.dtsi"
@@ -83,6 +27,64 @@
         bindings = <&kp RET>;
       };
       #endif
+
+
+      //
+      // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+      // for the thumbs (which are assigned to 6 layers in the Miryoku system).
+      //
+      // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
+      // activation for the symbol layer (if the tapped symbol key is released
+      // while the thumb layer key is still held down) for quicker programming.
+      //
+      #ifndef THUMB_HOLDING_TYPE
+      #define THUMB_HOLDING_TYPE "balanced"
+      #endif
+
+      //
+      // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
+      // a thumb key to activate a layer.  Shorter holds are treated as taps.
+      //
+      #ifndef THUMB_HOLDING_TIME
+      #define THUMB_HOLDING_TIME 200
+      #endif
+
+      //
+      // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
+      // after tapping a key to hold it again in order to make it auto-repeat.
+      //
+      #ifndef THUMB_REPEAT_DECAY
+      #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+      #endif
+
+      //
+      // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+      // for spacebar (assigned to the right thumb's home position by default).
+      //
+      // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
+      // activation for the symbol layer (if the tapped symbol key is released
+      // while the thumb layer key is still held down) for quicker programming.
+      //
+      #ifndef SPACE_HOLDING_TYPE
+      #define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
+      #endif
+
+      //
+      // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
+      // the space thumb key to activate.  Shorter holds are treated as taps.
+      //
+      #ifndef SPACE_HOLDING_TIME
+      #define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
+      #endif
+
+      //
+      // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
+      // after tapping a key to hold it again in order to make it auto-repeat.
+      //
+      #ifndef SPACE_REPEAT_DECAY
+      #define SPACE_REPEAT_DECAY 150
+      #endif
+
 
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
