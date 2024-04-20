@@ -228,6 +228,7 @@
 
       thumb: thumb_layer_access {
           compatible = "zmk,behavior-hold-tap";
+          label = "THUMB_LAYER_ACCESS"
           flavor = THUMB_HOLDING_TYPE;
           tapping-term-ms = <THUMB_HOLDING_TIME>;
           quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
@@ -237,6 +238,7 @@
 
       space: thumb_layer_access_spacebar {
           compatible = "zmk,behavior-hold-tap";
+          label = "THUMB_LAYER_ACCESS_SPACEBAR";
           flavor = SPACE_HOLDING_TYPE;
           tapping-term-ms = <SPACE_HOLDING_TIME>;
           quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
