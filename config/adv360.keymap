@@ -8,11 +8,68 @@
 #define DEFAULT 0
 #define FN 1
 #define SYMBOL 2
-#define QWERTY 3
+#define MEDIA 3
 #define MOD 4
 #define GAME 5
 #define GAMEFN 6
 #define AS(keycode) &as LS(keycode) keycode
+
+
+//
+// THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+// for the thumbs (which are assigned to 6 layers in the Miryoku system).
+//
+// NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
+// activation for the symbol layer (if the tapped symbol key is released
+// while the thumb layer key is still held down) for quicker programming.
+//
+#ifndef THUMB_HOLDING_TYPE
+#define THUMB_HOLDING_TYPE "balanced"
+#endif
+
+//
+// THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
+// a thumb key to activate a layer.  Shorter holds are treated as taps.
+//
+#ifndef THUMB_HOLDING_TIME
+#define THUMB_HOLDING_TIME 200
+#endif
+
+//
+// THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
+// after tapping a key to hold it again in order to make it auto-repeat.
+//
+#ifndef THUMB_REPEAT_DECAY
+#define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+#endif
+
+//
+// SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+// for spacebar (assigned to the right thumb's home position by default).
+//
+// NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
+// activation for the symbol layer (if the tapped symbol key is released
+// while the thumb layer key is still held down) for quicker programming.
+//
+#ifndef SPACE_HOLDING_TYPE
+#define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
+#endif
+
+//
+// SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
+// the space thumb key to activate.  Shorter holds are treated as taps.
+//
+#ifndef SPACE_HOLDING_TIME
+#define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
+#endif
+
+//
+// SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
+// after tapping a key to hold it again in order to make it auto-repeat.
+//
+#ifndef SPACE_REPEAT_DECAY
+#define SPACE_REPEAT_DECAY 150
+#endif
 
 / {
     behaviors {
@@ -166,6 +223,24 @@
           bindings = <&kp DOLLAR>, <&kp RIGHT_BRACKET>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
+
+      thumb: thumb_layer_access {
+          compatible = "zmk,behavior-hold-tap";
+          flavor = THUMB_HOLDING_TYPE;
+          tapping-term-ms = <THUMB_HOLDING_TIME>;
+          quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+          #binding-cells = <2>;
+          bindings = <&mo>, <&kp>;
+      };     
+
+      space: thumb_layer_access_spacebar {
+          compatible = "zmk,behavior-hold-tap";
+          flavor = SPACE_HOLDING_TYPE;
+          tapping-term-ms = <SPACE_HOLDING_TIME>;
+          quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
+          #binding-cells = <2>;
+          bindings = <&mo>, <&kp>;
+      };
     };
 
   keymap {
@@ -173,11 +248,11 @@
 
     default_layer {
       bindings = <
-        &l00       &l01      &l02      &l03      &l04      &l05     &kp K_CALC                                                                        &mo MOD     &r05     &r04     &r03      &r02      &r01     &r00
-        &l10       &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &none                                                                             &tog GAME   &kp F    &kp G    &kp C     &kp R     &kp L    &kp MINUS
-        &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &tog QWERTY      &kp LCTRL       &kp LALT      &kp RALT  &kp RCTRL                &kp K_CMENU &kp D    &kp H    &kp T     &kp N     &kp S    &kp TAB
-        &kp GRAVE  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                                     &kp DELETE    &kp LGUI                                       &kp B    &kp M    &kp W     &kp V     &kp Z    &kp MINUS
-        &mo FN     &l41      &kp HOME  &kp LEFT  &kp RIGHT          &lt SYMBOL BSPC  &mt RSHFT TAB   &kp INS       &kp INS   &mt LSHFT ENTER  &lt SYMBOL SPACE             &kp UP   &kp DOWN  &kp END   &r41     &mo FN
+        &l00       &l01      &l02      &l03      &l04      &l05     &none                                                                          &mo MOD     &r05     &r04     &r03      &r02      &r01     &r00
+        &l10       &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &none                                                                          &tog GAME   &kp F    &kp G    &kp C     &kp R     &kp L    &kp MINUS
+        &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &kp INS             &kp LCTRL &kp LALT      &kp RALT  &kp RCTRL                &kp K_CMENU &kp D    &kp H    &kp T     &kp N     &kp S    &kp TAB
+        &kp GRAVE  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                                  &mo MEDIA     &kp LGUI                                       &kp B    &kp M    &kp W     &kp V     &kp Z    &kp MINUS
+        &mo FN     &l41      &kp HOME  &kp LEFT  &kp RIGHT          &thumb SYMBOL BSPC  &mt RSHFT &kp DELETE    &kp INS   &mt LSHFT ENTER  &space SYMBOL SPACE          &kp UP   &kp DOWN  &kp END   &r41     &mo FN
       >;
     };
 
@@ -201,13 +276,13 @@
         >;
     };
 
-    layer_qwerty {
+    layer_media {
         bindings = <
-    &trans  &trans   &trans   &trans   &trans   &trans   &none                                                      &mo MOD &trans  &trans       &trans       &trans           &trans    &trans
-    &trans  &kp Q    &kp W    &kp E    &kp R    &kp T    &none                                                      &none   &trans  &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK  &trans    &trans
-    &trans  &kp A    &kp S    &kp D    &kp F    &kp G    &tog QWERTY    &trans     &trans  &trans  &trans           &none   &trans  &kp C_PREV   &kp C_PP     &kp C_NEXT       &trans    &trans
-    &trans  &kp Z    &kp X    &kp C    &kp V    &kp B                              &trans  &trans                           &trans  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP     &trans    &trans
-    &trans  &trans   &trans   &trans   &trans                   &trans  &kp ENTER  &trans  &trans  &trans  &trans                   &trans       &trans       &trans           &trans    &trans
+    &trans  &trans   &trans    &trans    &trans    &trans   &none                                                     &mo MOD &trans  &trans       &trans       &trans           &trans    &trans
+    &trans  &trans   &trans    &trans    &trans    &trans   &none                                                     &none   &trans  &kp PSCRN    &kp SLCK     &kp PAUSE_BREAK  &trans    &trans
+    &trans  &trans   &kp LC(X) &kp LC(C) &kp LC(V) &trans   &none         &trans     &trans  &trans  &trans           &none   &trans  &kp C_PREV   &kp C_PP     &kp C_NEXT       &trans    &trans
+    &trans  &trans   &trans    &trans    &trans    &trans                            &trans  &trans                           &trans  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP     &trans    &trans
+    &trans  &trans   &trans    &trans    &trans                   &trans  &trans     &trans  &trans  &trans  &trans                   &trans       &trans       &trans           &trans    &trans
         >;
     };
 
