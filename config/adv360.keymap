@@ -4,10 +4,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#define HYPER(keycode) LS(LC(LA(LG(keycode))))
-#define MEH(keycode) LS(LC(LA(keycode)))
-#define AS(keycode) &as LS(keycode) keycode
-
 #define DEFAULT 0
 #define FN 1
 #define SYMBOL 2
@@ -15,6 +11,10 @@
 #define MOD 4
 #define GAME 5
 #define GAMEFN 6
+
+#define HYPER(keycode) LS(LC(LA(LG(keycode))))
+#define MEH(keycode) LS(LC(LA(keycode)))
+#define AS(keycode) &as LS(keycode) keycode
 
 
 / {
