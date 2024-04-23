@@ -257,7 +257,7 @@
         &l10       &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &none                                                                          &tog GAME   &kp F    &kp G    &kp C     &kp R     &kp L    &kp MINUS
         &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &kp INS             &kp LCTRL &kp LALT      &kp RALT  &kp RCTRL                &kp K_CMENU &kp D    &kp H    &kp T     &kp N     &kp S    &kp TAB
         &kp GRAVE  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                                  &mo MEDIA     &kp LGUI                                       &kp B    &kp M    &kp W     &kp V     &kp Z    &kp MINUS
-        &mo FN     &l41      &kp HOME  &kp LEFT  &kp RIGHT          &lt SYMBOL BSPC     &mt RSHFT &kp DELETE    &kp INS   &mt LSHFT ENTER  &lt SYMBOL SPACE             &kp UP   &kp DOWN  &kp END   &r41     &mo FN
+        &mo FN     &l41      &kp HOME  &kp LEFT  &kp RIGHT          &lt SYMBOL BSPC     &kp RSHFT &kp DELETE    &kp INS   &mt LSHFT ENTER  &lt SYMBOL SPACE             &kp UP   &kp DOWN  &kp END   &r41     &mo FN
       >;
     };
 
