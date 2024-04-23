@@ -39,25 +39,25 @@
       // activation for the symbol layer (if the tapped symbol key is released
       // while the thumb layer key is still held down) for quicker programming.
       //
-//      #ifndef THUMB_HOLDING_TYPE
-//      #define THUMB_HOLDING_TYPE "balanced"
-//      #endif
+      #ifndef THUMB_HOLDING_TYPE
+      #define THUMB_HOLDING_TYPE "balanced"
+      #endif
 
       //
       // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
       // a thumb key to activate a layer.  Shorter holds are treated as taps.
       //
-//      #ifndef THUMB_HOLDING_TIME
-//      #define THUMB_HOLDING_TIME 200
-//      #endif
+      #ifndef THUMB_HOLDING_TIME
+      #define THUMB_HOLDING_TIME 200
+      #endif
 
       //
       // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
       // after tapping a key to hold it again in order to make it auto-repeat.
       //
-//      #ifndef THUMB_REPEAT_DECAY
-//      #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-//      #endif
+      #ifndef THUMB_REPEAT_DECAY
+      #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+      #endif
 
       //
       // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -67,25 +67,25 @@
       // activation for the symbol layer (if the tapped symbol key is released
       // while the thumb layer key is still held down) for quicker programming.
       //
-//      #ifndef SPACE_HOLDING_TYPE
-//      #define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
-//      #endif
+      #ifndef SPACE_HOLDING_TYPE
+      #define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
+      #endif
 
       //
       // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
       // the space thumb key to activate.  Shorter holds are treated as taps.
       //
-//      #ifndef SPACE_HOLDING_TIME
-//      #define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
-//      #endif
+      #ifndef SPACE_HOLDING_TIME
+      #define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
+      #endif
 
       //
       // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
       // after tapping a key to hold it again in order to make it auto-repeat.
       //
-//      #ifndef SPACE_REPEAT_DECAY
-//      #define SPACE_REPEAT_DECAY 150
-//      #endif
+      #ifndef SPACE_REPEAT_DECAY
+      #define SPACE_REPEAT_DECAY 150
+      #endif
 
 
       hm: homerow_mods {
@@ -228,23 +228,23 @@
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
-//      thumb: thumb_layer_access {
-//          compatible = "zmk,behavior-hold-tap";
-//          flavor = "balanced";
-//          tapping-term-ms = <200>;
-//          quick-tap-ms = <300>; // enable repeat
-//          #binding-cells = <2>;
-//          bindings = <&mo>, <&kp>;
-//      };     
-//
-//      space: thumb_layer_access_spacebar {
-//          compatible = "zmk,behavior-hold-tap";
-//          flavor = "balanced";
-//          tapping-term-ms = <200>;
-//          quick-tap-ms = <150>; // enable repeat
-//          #binding-cells = <2>;
-//          bindings = <&mo>, <&kp>;
-//      };
+      thumb: thumb_layer_access {
+          compatible = "zmk,behavior-hold-tap";
+          flavor = THUMB_HOLDING_TYPE;
+          tapping-term-ms = <THUMB_HOLDING_TIME>;
+          quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+          #binding-cells = <2>;
+          bindings = <&mo>, <&kp>;
+      };
+
+      space: thumb_layer_access_spacebar {
+          compatible = "zmk,behavior-hold-tap";
+          flavor = SPACE_HOLDING_TYPE;
+          tapping-term-ms = <SPACE_HOLDING_TIME>;
+          quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
+          #binding-cells = <2>;
+          bindings = <&mo>, <&kp>;
+      };
     };
 
 
@@ -257,7 +257,7 @@
         &l10       &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &none                                                                          &tog GAME   &kp F    &kp G    &kp C     &kp R     &kp L    &kp MINUS
         &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &kp INS             &kp LCTRL &kp LALT      &kp RALT  &kp RCTRL                &kp K_CMENU &kp D    &kp H    &kp T     &kp N     &kp S    &kp TAB
         &kp GRAVE  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                                  &mo MEDIA     &kp LGUI                                       &kp B    &kp M    &kp W     &kp V     &kp Z    &kp MINUS
-        &mo FN     &l41      &kp HOME  &kp LEFT  &kp RIGHT          &lt SYMBOL BSPC     &kp RSHFT &kp DELETE    &kp INS   &mt LSHFT ENTER  &lt SYMBOL SPACE             &kp UP   &kp DOWN  &kp END   &r41     &mo FN
+        &mo FN     &l41      &kp HOME  &kp LEFT  &kp RIGHT          &thumb SYMBOL BSPC  &kp RSHFT &kp DELETE    &kp INS   &mt LSHFT ENTER  &space SYMBOL SPACE          &kp UP   &kp DOWN  &kp END   &r41     &mo FN
       >;
     };
 
