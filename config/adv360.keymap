@@ -48,7 +48,7 @@
       // a thumb key to activate a layer.  Shorter holds are treated as taps.
       //
       #ifndef THUMB_HOLDING_TIME
-      #define THUMB_HOLDING_TIME 100
+      #define THUMB_HOLDING_TIME 150
       #endif
 
       //
