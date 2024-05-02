@@ -40,7 +40,7 @@
       // while the thumb layer key is still held down) for quicker programming.
       //
       #ifndef THUMB_HOLDING_TYPE
-      #define THUMB_HOLDING_TYPE "hold-preferred"
+      #define THUMB_HOLDING_TYPE "balanced"
       #endif
 
       //
