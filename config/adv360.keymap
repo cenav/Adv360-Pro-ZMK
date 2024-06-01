@@ -152,7 +152,7 @@
           compatible = "zmk,behavior-mod-morph";
           label = "left_x0_y5";
           #binding-cells = <0>;
-          bindings = <&kp N5>, <&kp STAR>;
+          bindings = <&kp N5>, <&kp EXCLAMATION>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -160,7 +160,7 @@
           compatible = "zmk,behavior-mod-morph";
           label = "right_x0_y5";
           #binding-cells = <0>;
-          bindings = <&kp N6>, <&kp HASH>;
+          bindings = <&kp N6>, <&kp STAR>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -216,7 +216,7 @@
           compatible = "zmk,behavior-mod-morph";
           label = "left_x2_y6";
           #binding-cells = <0>;
-          bindings = <&kp DOLLAR>, <&kp PERCENT>;
+          bindings = <&kp PERCENT>, <&kp PERCENT>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -241,6 +241,22 @@
           label = "right_x4_y1";
           #binding-cells = <0>;
           bindings = <&kp DOLLAR>, <&kp RIGHT_BRACKET>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      l42: left_x4_y2 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "left_x4_y2";
+          #binding-cells = <0>;
+          bindings = <&kp CARET>, <&kp HASH>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      r42: right_x4_y2 {
+          compatible = "zmk,behavior-mod-morph";
+          label = "right_x4_y2";
+          #binding-cells = <0>;
+          bindings = <&kp DOLLAR>, <&kp STAR>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
