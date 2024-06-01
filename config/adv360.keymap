@@ -232,7 +232,7 @@
           compatible = "zmk,behavior-mod-morph";
           label = "left_x4_y1";
           #binding-cells = <0>;
-          bindings = <&kp AT>, <&kp EXCLAMATION>;
+          bindings = <&kp AT>, <&kp GRAVE>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -277,6 +277,13 @@
           #binding-cells = <2>;
           bindings = <&mo>, <&kp>;
       };
+
+      bspc_del: backspace_delete {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp BACKSPACE>, <&kp DELETE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
     };
 
 
@@ -287,9 +294,9 @@
       bindings = <
         &l00       &l01      &l02      &l03      &l04      &l05     &kp INS                                                                        &mo MOD     &r05     &r04     &r03      &r02      &r01     &r00
         &kp GRAVE  &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &none                                                                          &tog GAME   &kp F    &kp G    &kp C     &kp R     &kp L    &kp MINUS
-        &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &l26                &kp LCTRL &kp LALT      &kp RALT  &kp RCTRL                &r26        &kp D    &kp H    &kp T     &kp N     &kp S    &kp TAB
+        &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &l26                &kp LCTRL &kp LALT      &kp LALT  &kp RCTRL                &r26        &kp D    &kp H    &kp T     &kp N     &kp S    &kp TAB
         &mo MEDIA  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                                  &mo MEDIA     &kp LGUI                                       &kp B    &kp M    &kp W     &kp V     &kp Z    &kp MINUS
-        &mo FN     &l41      &kp HOME  &kp LEFT  &kp RIGHT          &thumb SYMBOL BSPC  &kp RSHFT &kp DELETE    &kp RALT  &mt LSHFT ENTER  &space SYMBOL SPACE          &kp UP   &kp DOWN  &kp END   &kp FSLH &mo FN
+        &mo FN     &l41      &l42      &kp LEFT  &kp RIGHT                 &bspc_del    &kp RSHFT &kp DELETE    &kp INS   &mt LSHFT ENTER  &kp SPACE                    &kp UP   &kp DOWN  &r42      &kp FSLH &mo FN
       >;
     };
 
