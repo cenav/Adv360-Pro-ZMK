@@ -316,7 +316,7 @@
     &trans  &kp GRAVE &kp LPAR  &kp LBRC  &kp LBKT  &kp SQT    &none                                                   &none   &kp DQT   &kp RBKT  &kp RBRC  &kp RPAR  &kp SEMI  &trans
     &trans  &kp EXCL  &kp CARET &kp PLUS  &kp COLON &kp HASH   &none        &kp BSLH &trans   &trans  &trans           &none   &kp STAR  &kp EQUAL &kp UNDER &kp DLLR  &kp QMARK &trans
     &trans  &kp TILDE &kp PIPE  &kp LT    &kp GT    &trans                           &trans   &trans                           &trans    &kp AMPS  &kp MINUS &kp AT    &kp FSLH  &trans
-    &trans  &trans    &trans    &trans    &trans                    &trans  &kp FSLH &trans   &trans  &kp PRCNT &trans                   &trans    &trans    &trans    &trans    &trans
+    &trans  &trans    &trans    &kp HOME  &kp END                   &trans  &kp FSLH &trans   &trans  &kp PRCNT &trans                   &kp PG_UP &kp PG_DN &trans    &trans    &trans
         >;
     };
 
