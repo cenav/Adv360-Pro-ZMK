@@ -313,9 +313,9 @@
     layer_symbol {
         bindings = <
     &trans  &trans    &trans    &trans    &trans    &trans     &none                                                   &mo MOD &trans    &trans    &trans    &trans    &trans    &trans
-    &trans  &kp GRAVE &kp LPAR  &kp LBRC  &kp LBKT  &kp SQT    &none                                                   &none   &kp DQT   &kp RBKT  &kp RBRC  &kp RPAR  &kp SEMI  &trans
-    &trans  &kp EXCL  &kp CARET &kp PLUS  &kp COLON &kp HASH   &none        &trans   &trans   &trans  &trans           &none   &kp STAR  &kp EQUAL &kp UNDER &kp DLLR  &kp QMARK &trans
-    &trans  &kp TILDE &kp PIPE  &kp LT    &kp GT    &trans                           &trans   &trans                           &trans    &kp AMPS  &kp MINUS &kp AT    &kp FSLH  &trans
+    &trans  &kp GRAVE &kp LPAR  &kp LBRC  &kp LBKT  &kp AT     &none                                                   &none   &kp DQT   &kp RBKT  &kp RBRC  &kp RPAR  &kp SEMI  &trans
+    &trans  &kp EXCL  &kp CARET &kp PLUS  &kp COLON &kp STAR   &none        &trans   &trans   &trans  &trans           &none   &kp HASH  &kp EQUAL &kp UNDER &kp DLLR  &kp QMARK &trans
+    &trans  &kp TILDE &kp PIPE  &kp LT    &kp GT    &trans                           &trans   &trans                           &trans    &kp PRCNT &kp MINUS &kp AMPS  &kp FSLH  &trans
     &trans  &trans    &trans    &kp HOME  &kp END                   &trans  &trans   &trans   &trans  &kp PRCNT &trans                   &kp PG_UP &kp PG_DN &trans    &trans    &trans
         >;
     };
