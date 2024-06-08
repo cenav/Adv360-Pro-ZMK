@@ -6,7 +6,7 @@
 
 #define DEFAULT 0
 #define FN 1
-#define MEDIA 2
+#define SYM 2
 #define MOD 3
 
 #define HYPER(keycode) LS(LC(LA(LG(keycode))))
@@ -265,11 +265,11 @@
 
     default_layer {
       bindings = <
-        &l00       &l01      &l02      &l03      &l04      &l05     &kp LC(X)                                                                   &mo MOD   &r05     &r04     &r03      &r02    &r01      &r00
-        &kp GRAVE  &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y    &kp LC(C)                                                                   &none     &kp F    &kp G    &kp C     &kp R   &kp L     &kp MINUS
-        &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I    &kp LC(V)           &kp LCTRL &kp LALT   &kp LALT  &mt RCTRL TAB            &kp INS   &kp D    &kp H    &kp T     &kp N   &kp S     &kp TAB
-        &kp TILDE  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                                  &mo MEDIA  &mo MEDIA                                    &kp B    &kp M    &kp W     &kp V   &kp Z     &kp FSLH
-        &mo FN     &l41      &l42      &kp LEFT  &kp RIGHT                 &bspc_del    &kp RSHFT &kp LGUI   &kp RGUI    &mt LSHFT ENTER  &kp SPACE                &kp UP   &kp DOWN  &r42    &kp BSLH  &mo FN
+        &l00       &l01      &l02      &l03      &l04      &l05   &kp LC(X)                                                               &mo MOD   &r05   &r04    &r03      &r02     &r01       &r00
+        &kp GRAVE  &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y  &kp LC(C)                                                               &kp PSCRN &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
+        &kp ESC    &kp A     &kp O     &kp E     &kp U     &kp I  &kp LC(V)       &kp LCTRL &kp LALT   &kp LALT  &mt RCTRL TAB            &kp INS   &kp D  &kp H   &kp T     &kp N    &kp S      &bspc_del
+        &kp TILDE  &kp SEMI  &kp Q     &kp J     &kp K     &kp X                            &kp LGUI   &kp RGUI                                     &kp B  &kp M   &kp W     &kp V    &kp Z      &kp FSLH
+        &mo FN     &PG_UP    &kp HOME  &kp LEFT  &kp RIGHT               &mo SYM  &kp RSHFT &kp LGUI   &kp RGUI  &mt LSHFT ENTER  &kp SPACE                &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
       >;
     };
 
@@ -283,13 +283,13 @@
         >;
     };
 
-    layer_media {
+    layer_symbol {
         bindings = <
-    &trans  &trans   &trans    &trans    &trans    &trans   &none                                                   &mo MOD &trans  &trans       &trans       &trans       &trans    &trans
-    &trans  &trans   &kp PSCRN &kp INS   &kp SLCK  &trans   &none                                                   &none   &trans  &trans       &kp K_CMENU  &trans       &trans    &trans
-    &trans  &trans   &kp LC(X) &kp LC(C) &kp LC(V) &trans   &none         &trans   &trans  &trans  &trans           &none   &trans  &kp C_PREV   &kp C_PP     &kp C_NEXT   &trans    &trans
-    &trans  &trans   &trans    &trans    &trans    &trans                          &trans  &trans                           &trans  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &trans    &trans
-    &trans  &trans   &trans    &kp HOME  &kp END                  &trans  &trans   &trans  &trans  &kp K_CMENU  &trans              &kp PG_UP    &kp PG_DN    &trans       &trans    &trans
+    &trans  &trans     &trans        &trans      &trans       &trans     &none                                                   &mo MOD &trans    &trans      &trans      &trans      &trans    &trans
+    &trans  &kp GRAVE  &kp LPAR      &kp LBRC    &kp LBKT     &kp SQT    &none                                                   &none   &kp DQT   &kp RBKT    &kp RBRC    &kp RPAR    &kp SEMI  &trans
+    &trans  &kp EXCL   &kp CARET     &kp PLUS    &kp COLON    &kp STAR   &none        &trans   &trans   &trans  &kp BSLH         &none   &kp HASH  &kp EQUAL   &kp UNDER   &kp DLLR    &kp QMARK &trans
+    &trans  &kp TILDE  &kp PIPE      &kp LT      &kp GT       &trans                           &trans   &trans                           &trans    &kp AT      &kp MINUS   &kp AMPS    &kp FSLH  &trans
+    &trans  &trans     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP                 &trans  &trans   &trans   &trans  &kp PRCNT &trans                   &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans    &trans
         >;
     };
 
