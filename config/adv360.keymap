@@ -27,64 +27,6 @@
       };
       #endif
 
-
-      //
-      // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-      // for the thumbs (which are assigned to 6 layers in the Miryoku system).
-      //
-      // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-      // activation for the symbol layer (if the tapped symbol key is released
-      // while the thumb layer key is still held down) for quicker programming.
-      //
-      #ifndef THUMB_HOLDING_TYPE
-      #define THUMB_HOLDING_TYPE "balanced"
-      #endif
-
-      //
-      // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
-      // a thumb key to activate a layer.  Shorter holds are treated as taps.
-      //
-      #ifndef THUMB_HOLDING_TIME
-      #define THUMB_HOLDING_TIME 175
-      #endif
-
-      //
-      // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
-      // after tapping a key to hold it again in order to make it auto-repeat.
-      //
-      #ifndef THUMB_REPEAT_DECAY
-      #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-      #endif
-
-      //
-      // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-      // for spacebar (assigned to the right thumb's home position by default).
-      //
-      // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-      // activation for the symbol layer (if the tapped symbol key is released
-      // while the thumb layer key is still held down) for quicker programming.
-      //
-      #ifndef SPACE_HOLDING_TYPE
-      #define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
-      #endif
-
-      //
-      // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
-      // the space thumb key to activate.  Shorter holds are treated as taps.
-      //
-      #ifndef SPACE_HOLDING_TIME
-      #define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
-      #endif
-
-      //
-      // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
-      // after tapping a key to hold it again in order to make it auto-repeat.
-      //
-      #ifndef SPACE_REPEAT_DECAY
-      #define SPACE_REPEAT_DECAY 150
-      #endif
-
-
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
@@ -93,162 +35,6 @@
           quick_tap_ms = <175>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
-      };
-
-      as: auto_shift {
-          compatible = "zmk,behavior-hold-tap";
-          label = "AUTO_SHIFT";
-          #binding-cells = <2>;
-          tapping_term_ms = <150>;
-          quick_tap_ms = <0>;
-          flavor = "tap-preferred";
-          bindings = <&kp>, <&kp>;
-      };
-
-      l00: left_x0_y0 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x0_y0";
-          #binding-cells = <0>;
-          bindings = <&kp AMPERSAND>, <&kp PIPE>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      l01: left_x0_y1 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x0_y1";
-          #binding-cells = <0>;
-          bindings = <&kp N1>, <&kp PLUS>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      l02: left_x0_y2 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x0_y2";
-          #binding-cells = <0>;
-          bindings = <&kp N2>, <&kp LEFT_BRACKET>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      l03: left_x0_y3 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x0_y3";
-          #binding-cells = <0>;
-          bindings = <&kp N3>, <&kp LEFT_BRACE>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      l04: left_x0_y4 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x0_y4";
-          #binding-cells = <0>;
-          bindings = <&kp N4>, <&kp LEFT_PARENTHESIS>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      l05: left_x0_y5 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x0_y5";
-          #binding-cells = <0>;
-          bindings = <&kp N5>, <&kp PERCENT>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      r05: right_x0_y5 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "right_x0_y5";
-          #binding-cells = <0>;
-          bindings = <&kp N6>, <&kp EQUAL>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      r04: right_x0_y4 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "right_x0_y4";
-          #binding-cells = <0>;
-          bindings = <&kp N7>, <&kp RIGHT_PARENTHESIS>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      r03: right_x0_y3 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "right_x0_y3";
-          #binding-cells = <0>;
-          bindings = <&kp N8>, <&kp RIGHT_BRACE>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      r02: right_x0_y2 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "right_x0_y2";
-          #binding-cells = <0>;
-          bindings = <&kp N9>, <&kp RIGHT_BRACKET>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      r01: right_x0_y1 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "right_x0_y1";
-          #binding-cells = <0>;
-          bindings = <&kp N0>, <&kp UNDERSCORE>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      r00: right_x0_y0 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "right_x0_y0";
-          #binding-cells = <0>;
-          bindings = <&kp PIPE>, <&kp AMPERSAND>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      l10: left_x1_y0 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x1_y0";
-          #binding-cells = <0>;
-          bindings = <&kp PIPE>, <&kp AMPERSAND>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      l41: left_x4_y1 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x4_y1";
-          #binding-cells = <0>;
-          bindings = <&kp AT>, <&kp EXCLAMATION>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      l42: left_x4_y2 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "left_x4_y2";
-          #binding-cells = <0>;
-          bindings = <&kp CARET>, <&kp HASH>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      r42: right_x4_y2 {
-          compatible = "zmk,behavior-mod-morph";
-          label = "right_x4_y2";
-          #binding-cells = <0>;
-          bindings = <&kp DOLLAR>, <&kp STAR>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
-
-      thumb: thumb_layer_access {
-          compatible = "zmk,behavior-hold-tap";
-          flavor = THUMB_HOLDING_TYPE;
-          tapping-term-ms = <THUMB_HOLDING_TIME>;
-          quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-          #binding-cells = <2>;
-          bindings = <&mo>, <&kp>;
-      };
-
-      space: thumb_layer_access_spacebar {
-          compatible = "zmk,behavior-hold-tap";
-          flavor = SPACE_HOLDING_TYPE;
-          tapping-term-ms = <SPACE_HOLDING_TIME>;
-          quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
-          #binding-cells = <2>;
-          bindings = <&mo>, <&kp>;
       };
 
       bspc_del: backspace_delete {
@@ -265,8 +51,8 @@
 
     default_layer {
       bindings = <
-        &l00       &l01       &l02      &l03      &l04      &l05   &kp LC(X)                                                               &mo MOD      &r05   &r04    &r03      &r02     &r01       &r00
-        &kp GRAVE  &kp SQT    &kp COMMA &kp DOT   &kp P     &kp Y  &kp LC(C)                                                               &kp PSCRN    &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
+        &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5 &kp LC(X)                                                               &mo MOD      &kp N6 &kp N7  &kp N8    &kp N9   &kp N0     &bspc_del
+        &kp TAB    &kp SQT    &kp COMMA &kp DOT   &kp P     &kp Y  &kp LC(C)                                                               &kp PSCRN    &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
         &kp ESC    &kp A      &kp O     &kp E     &kp U     &kp I  &kp LC(V)       &kp LCTRL &kp LALT   &kp LALT  &mt RCTRL TAB            &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &bspc_del
         &kp TILDE  &kp SEMI   &kp Q     &kp J     &kp K     &kp X                            &kp LGUI   &kp RGUI                                        &kp B  &kp M   &kp W     &kp V    &kp Z      &kp FSLH
         &mo FN     &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT               &mo SYM  &kp RSHFT &kp INS    &kp INS   &mt LSHFT ENTER  &kp SPACE                   &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
@@ -275,7 +61,7 @@
 
     layer_fn {
         bindings = <
-    &trans   &trans     &kp F10   &kp F11   &kp F12  &trans  &none                                                          &mo MOD  &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE &kp KP_MULTIPLY  &trans
+    &trans   &trans     kkp F10   &kp F11   &kp F12  &trans  &none                                                          &mo MOD  &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE &kp KP_MULTIPLY  &trans
     &trans   &trans     &kp F7    &kp F8    &kp F9   &trans  &none                                                          &none    &trans  &kp KP_N7   &kp KP_N8     &kp KP_N9     &kp KP_MINUS     &trans
     &trans   &trans     &kp F4    &kp F5    &kp F6   &trans  &none           &trans     &trans   &trans  &trans             &none    &trans  &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      &trans
     &trans   &trans     &kp F1    &kp F2    &kp F3   &trans                             &trans   &trans                              &trans  &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER     &trans
@@ -287,8 +73,8 @@
         bindings = <
     &trans  &trans     &trans        &trans      &trans       &trans     &none                                                   &mo MOD &trans    &trans      &trans      &trans      &trans    &trans
     &trans  &kp GRAVE  &kp LBKT      &kp LBRC    &kp LPAR     &kp SQT    &none                                                   &none   &kp DQT   &kp RPAR    &kp RBRC    &kp RBKT    &kp SEMI  &trans
-    &trans  &kp EXCL   &kp CARET     &kp PLUS    &kp COLON    &kp STAR   &none        &trans   &trans   &trans  &kp BSLH         &none   &kp HASH  &kp EQUAL   &kp UNDER   &kp DLLR    &kp QMARK &trans
-    &trans  &kp TILDE  &kp PIPE      &kp LT      &kp GT       &trans                           &trans   &trans                           &trans    &kp AT      &kp MINUS   &kp AMPS    &kp FSLH  &trans
+    &trans  &kp PLUS   &kp CARET     &kp AMPS    &kp EXCL     &kp HASH   &none        &trans   &trans   &trans  &kp BSLH         &none   &kp STAR  &kp EQUAL   &kp UNDER   &kp DLLR    &kp QMARK &trans
+    &trans  &kp COLON  &kp TILDE     &kp LT      &kp GT       &trans                           &trans   &trans                           &trans    &kp AT      &kp MINUS   &kp FSLH    &kp PIPE  &trans
     &trans  &trans     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP                 &trans  &trans   &trans   &trans  &kp PRCNT &trans                   &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans    &trans
         >;
     };
