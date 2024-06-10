@@ -45,7 +45,6 @@
           quick_tap_ms = <175>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
-          hold-trigger-on-release
           hold-while-undecided;
       };
 
