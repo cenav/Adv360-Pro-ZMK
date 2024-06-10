@@ -67,7 +67,7 @@
         &kp TAB    &kp SQT    &kp COMMA &kp DOT   &kp P     &kp Y  &kp LC(C)                                                               &kp PSCRN    &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
         &kp ESC    &kp A      &kp O     &kp E     &kp U     &kp I  &kp LC(V)       &kp LCTRL &kp LALT   &kp LALT  &mt RCTRL TAB            &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &bspc_del
         &kp TILDE  &kp SEMI   &kp Q     &kp J     &kp K     &kp X                            &kp LGUI   &kp RGUI                                        &kp B  &kp M   &kp W     &kp V    &kp Z      &kp FSLH
-        &mo FN     &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT               &mo SYM  &hms RSHFT BSPC &kp INS    MEH   &mt LSHFT ENTER  &kp SPACE                   &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
+        &mo FN     &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT               &mo SYM  &hms RSHFT BSPC &kp INS    MEH()   &mt LSHFT ENTER  &kp SPACE                   &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
       >;
     };
 
