@@ -51,11 +51,19 @@
 
     default_layer {
       bindings = <
+<<<<<<< HEAD
         &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5 &kp LC(X)                                                          &mo MOD      &kp N6 &kp N7  &kp N8    &kp N9   &kp N0     &kp MINUS
         &kp TAB    &kp SQT    &kp COMMA &kp DOT   &kp P     &kp Y  &kp LC(C)                                                          &kp INS      &kp F  &kp G   &kp C     &kp R    &kp L      &kp PSCRN
         &kp ESC    &kp A      &kp O     &kp E     &kp U     &kp I  &kp LC(V)       &kp LCTRL &kp LALT  &kp LALT  &kp RCTRL            &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
         &kp TILDE  &kp SEMI   &kp Q     &kp J     &kp K     &kp X                            &mo SYM   &mo SYM                                     &kp B  &kp M   &kp W     &kp V    &kp Z      &kp FSLH
         &mo FUN    &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT             &bspc_del  &kp RSHFT &kp LGUI  &kp RGUI  &mt LSHFT ENTER  &kp SPACE               &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FUN
+=======
+        &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5 &kp LC(X)                                                               &mo MOD      &kp N6 &kp N7  &kp N8    &kp N9   &kp N0     &bspc_del
+        &kp TAB    &kp SQT    &kp COMMA &kp DOT   &kp P     &kp Y  &kp LC(C)                                                               &kp PSCRN    &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
+        &kp ESC    &kp A      &kp O     &kp E     &kp U     &kp I  &kp LC(V)       &mt LCTRL BSPC &kp LALT   &kp LALT  &kp RCTRL           &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
+        &kp TILDE  &kp SEMI   &kp Q     &kp J     &kp K     &kp X                            &kp LGUI   &kp RGUI                                        &kp B  &kp M   &kp W     &kp V    &kp Z      &kp FSLH
+        &mo FN     &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT               &mo SYM  &kp RSHFT &kp INS    &kp LS(LC(LA(ENTER))) &mt LSHFT ENTER  &kp SPACE       &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
+>>>>>>> 1a924f8f8699911d1014dba8bc18bf79d64835cd
       >;
     };
 
