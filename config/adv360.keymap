@@ -140,7 +140,7 @@
         bindings = <
     &trans  &trans    &trans    &trans     &trans     &trans   &none                                              &mo MOD      &sym6  &sym7   &sym8     &sym9    &sym0      &kp FSLH
     &trans  &trans    &trans    &trans     &trans     &trans   &none                                              &kp INS      &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
-    &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp RSHFT  &trans   &none        &trans  &trans  &trans  &mo NUM       &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
+    &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp RSHFT  &trans   &none        &trans  &trans  &trans  &to NUM       &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
     &trans  &trans    &trans    &trans     &trans     &trans                        &trans  &trans                             &kp B  &kp M   &kp W     &kp V    &kp Z      &caps_word
     &trans  &trans    &trans    &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans                    &kp UP  &kp DOWN  &kp END  &kp PG_DN  &sl FN        
       >;
@@ -158,11 +158,11 @@
 
     layer_num {
         bindings = <
-    &trans  &trans    &trans    &trans     &trans     &trans   &none                                                     &mo MOD  &trans  &kp KP_EQUAL  &kp KP_DIVIDE &kp KP_MULTIPLY &trans        &trans
-    &trans  &trans    &trans    &trans     &trans     &trans   &none                                                     &none    &trans  &kp N7        &kp N8        &kp N9          &kp KP_MINUS  &trans
-    &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp RSHFT  &trans   &none        &mo NUM    &trans   &trans  &trans           &none    &trans  &kp N4        &kp N5        &kp N6          &kp KP_PLUS   &trans
-    &trans  &trans    &trans    &trans     &trans     &trans                           &trans   &trans                            &trans  &kp N1        &kp N2        &kp N3          &kp KP_ENTER  &trans
-    &trans  &trans    &trans    &trans     &trans                   &kp DEL &trans     &trans   &trans  &trans  &kp KP_N0                 &kp PG_UP     &kp PG_DN     &kp KP_DOT      &kp RBKT      &trans
+    &trans  &trans    &trans    &trans     &trans     &trans   &none                                                   &mo MOD  &trans  &kp KP_EQUAL  &kp KP_DIVIDE &kp KP_MULTIPLY &trans        &trans
+    &trans  &trans    &trans    &trans     &trans     &trans   &none                                                   &none    &trans  &kp N7        &kp N8        &kp N9          &kp KP_MINUS  &trans
+    &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp RSHFT  &trans   &none        &to_base  &trans  &trans  &trans           &none    &trans  &kp N4        &kp N5        &kp N6          &kp KP_PLUS   &trans
+    &trans  &trans    &trans    &trans     &trans     &trans                          &trans  &trans                            &trans  &kp N1        &kp N2        &kp N3          &kp KP_ENTER  &trans
+    &to 0   &trans    &trans    &trans     &trans                   &trans  &trans    &trans  &trans  &trans  &kp KP_N0                 &kp PG_UP     &kp PG_DN     &kp KP_DOT      &kp RBKT      &trans
         >;
     };
 
@@ -180,7 +180,7 @@
         bindings = <
     &trans   &trans     &kp F10   &kp F11   &kp F12  &trans  &none                                                          &mo MOD  &trans  &kp KP_COMMA  &kp KP_EQUAL  &kp KP_DIVIDE &kp KP_MULTIPLY  &trans
     &trans   &trans     &kp F7    &kp F8    &kp F9   &trans  &none                                                          &none    &trans  &kp N7        &kp N8        &kp N9        &kp KP_MINUS     &trans
-    &trans   &trans     &kp F4    &kp F5    &kp F6   &trans  &none           &trans     &trans   &trans  &trans             &none    &trans  &kp N4        &kp N5        &kp N6        &kp KP_PLUS      &trans
+    &trans   &trans     &kp F4    &kp F5    &kp F6   &trans  &none           &kp LCTRL  &trans   &trans  &trans             &none    &trans  &kp N4        &kp N5        &kp N6        &kp KP_PLUS      &trans
     &trans   &trans     &kp F1    &kp F2    &kp F3   &trans                             &trans   &trans                              &trans  &kp N1        &kp N2        &kp N3        &kp KP_ENTER     &trans
     &trans   &trans     &trans    &kp HOME  &kp END                  &kp DEL &trans     &trans   &trans  &trans  &kp KP_N0                   &kp PG_UP     &kp PG_DN     &kp KP_DOT    &kp RBKT         &trans
         >;
