@@ -38,5 +38,5 @@
   to_base: to_base {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings = <&to 0>;
+    bindings = <&macro_release &to 0>;
   };
