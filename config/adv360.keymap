@@ -56,7 +56,7 @@
       sym2: symbol_2 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp CARET>, <&kp LEFT_BRACKET>;
+          bindings = <&kp LEFT_BRACKET>, <&kp CARET>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -105,7 +105,7 @@
       sym9: symbol_9 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp DOLLAR>, <&kp RIGHT_BRACKET>;
+          bindings = <&kp RIGHT_BRACKET>, <&kp DOLLAR>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -134,11 +134,11 @@
 
       layer_num {
         bindings = <
-          &trans  &trans  &trans  &trans    &trans    &trans  &none                                               &mo MOD  &trans  &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans        &trans
-          &trans  &trans  &trans  &trans    &trans    &trans  &none                                               &none    &trans  &kp N7       &kp N8        &kp N9          &kp KP_MINUS  &trans
-          &trans  &trans  &trans  &kp LGUI  &kp LALT  &trans  &none         &trans  &trans  &trans  &trans        &none    &trans  &kp N4       &kp N5        &kp N6          &kp KP_PLUS   &trans
-          &trans  &trans  &trans  &trans    &trans    &trans                        &trans  &trans                         &trans  &kp N1       &kp N2        &kp N3          &kp KP_ENTER  &trans
-          &trans  &trans  &trans  &trans    &trans                  &trans  &to 0   &trans  &to FN  &trans  &kp N0                 &kp PG_UP    &kp PG_DN     &kp KP_DOT      &kp KP_ENTER  &trans
+          &trans  &trans  &trans  &trans    &trans    &trans  &none                                                 &mo MOD  &trans  &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans        &trans
+          &trans  &trans  &trans  &trans    &trans    &trans  &none                                                 &none    &trans  &kp N7       &kp N8        &kp N9          &kp KP_MINUS  &trans
+          &to 0   &trans  &trans  &kp LGUI  &kp LALT  &trans  &none         &kp LGUI  &trans  &trans  &trans        &none    &trans  &kp N4       &kp N5        &kp N6          &kp KP_PLUS   &trans
+          &trans  &trans  &trans  &trans    &trans    &trans                          &trans  &trans                         &trans  &kp N1       &kp N2        &kp N3          &kp KP_ENTER  &trans
+          &trans  &trans  &trans  &trans    &trans                  &trans  &to 0     &trans  &to FN  &trans  &kp N0                 &kp PG_UP    &kp PG_DN     &kp KP_DOT      &kp KP_ENTER  &trans
         >;
       };
 
@@ -146,7 +146,7 @@
         bindings = <
           &trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &none                                                 &mo MOD  &trans  &trans    &trans    &trans  &trans  &trans
           &trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &none                                                 &none    &trans  &trans    &trans    &trans  &trans  &trans
-          &trans  &trans  &kp F4   &kp F5   &kp F6   &trans  &none        &trans  &trans    &trans   &trans        &none    &trans  &kp LALT  &kp RGUI  &trans  &trans  &trans
+          &to 0   &trans  &kp F4   &kp F5   &kp F6   &trans  &none        &trans  &trans    &trans   &trans        &none    &trans  &kp LALT  &kp RGUI  &trans  &trans  &trans
           &trans  &trans  &kp F1   &kp F2   &kp F3   &trans                       &trans    &trans                          &trans  &trans    &trans    &trans  &trans  &trans
           &trans  &trans  &trans   &trans   &trans                &trans  &to 0   &trans    &to NUM  &trans  &trans                 &trans    &trans    &trans  &trans  &trans
         >;
