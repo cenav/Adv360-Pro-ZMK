@@ -118,6 +118,14 @@
 
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_to_num {
+            timeout-ms = <50>;
+            key-positions = <35 38>;
+            bindings = <&to NUM>;
+        };
+    };
 
     keymap {
       compatible = "zmk,keymap";
