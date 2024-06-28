@@ -122,14 +122,14 @@
         compatible = "zmk,combos";
         combo_to_num {
             timeout-ms = <50>;
-            layers = <0>
+            layers = <0>;
             key-positions = <35 38>;
             bindings = <&to NUM>;
         };
 
         combo_to_def {
             timeout-ms = <50>;
-            layers = <1>
+            layers = <1>;
             key-positions = <35 38>;
             bindings = <&to 0>;
         };
