@@ -5,16 +5,13 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #define DEFAULT 0
-#define NUM 1
-#define FN 2
-#define MEDIA 3
-#define MOD 4
+#define FN 1
+#define NUM 2
+#define MOD 3
 
 #define HYPER LS(LC(LA(LGUI)))
 #define MEH LS(LC(LA))
 #define TSKMNG LC(LA(DEL))
-#define AS(keycode) &as LS(keycode) keycode
-
 
 / {
     behaviors {
@@ -44,6 +41,13 @@
         #binding-cells = <0>;
         bindings = <&kp BACKSPACE>, <&kp DELETE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      td_fn: tap_dance_fn {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&mo FN>, <&to FN>;
       };
 
       sym1: symbol_1 {
@@ -116,95 +120,6 @@
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
-      sn1: symbol_number_1 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym1>;
-      };
-
-      sn2: symbol_number_2 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym2>;
-      };
-
-      sn3: symbol_number_3 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym3>;
-      };
-
-      sn4: symbol_number_4 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym4>;
-      };
-
-      sn5: symbol_number_5 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym5>;
-      };
-
-      sn6: symbol_number_6 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym6>;
-      };
-
-      sn7: symbol_number_7 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym7>;
-      };
-
-      sn8: symbol_number_8 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym8>;
-      };
-
-      sn9: symbol_number_9 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym9>;
-      };
-
-      sn0: symbol_number_0 {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping_term_ms = <135>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&sym0>;
-      };
     };
 
     combos {
@@ -229,41 +144,31 @@
 
       default_layer {
         bindings = <
-          &kp BSLH   &sn1 N1 0  &sn2 N2 0  &sn3 N3 0 &sn4 N4 0 &sn5 N5 0 &kp LC(X)                                                         &mo MOD     &sn6 N6 0 &sn7 N7 0 &sn8 N8 0 &sn9 N9 0  &sn0 N0 0  &kp FSLH
-          &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y     &kp LC(C)                                                         &kp INS     &kp F     &kp G     &kp C     &kp R      &kp L      &kp MINUS
-          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &kp LC(V)     &kp LCTRL &kp LALT   &kp LALT  &kp RCTRL            &kp K_CMENU &kp D     &kp H     &kp T     &kp N      &kp S      &kp TAB
-          &to NUM    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                             &kp LGUI   &kp RGUI                                   &kp B     &kp M     &kp W     &kp V      &kp Z      &to FN
-          &mo NUM    &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT             &bspc_del  &kp RSHFT  &mo MEDIA  &to NUM   &mt LSHFT ENTER  &kp SPACE                 &kp UP    &kp DOWN  &kp END    &kp PG_DN  &mo FN
-        >;
-      };
-
-      layer_num {
-        bindings = <
-          &trans  &trans  &trans  &trans    &trans    &trans  &none                                                &mo MOD  &trans  &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans        &trans
-          &trans  &trans  &trans  &trans    &trans    &trans  &none                                                &none    &trans  &kp N7       &kp N8        &kp N9          &kp KP_MINUS  &trans
-          &trans  &trans  &trans  &kp LGUI  &kp LALT  &trans  &none        &trans  &trans    &trans  &trans        &none    &trans  &kp N4       &kp N5        &kp N6          &kp KP_PLUS   &trans
-          &to 0   &trans  &trans  &trans    &trans    &trans                       &trans    &trans                         &trans  &kp N1       &kp N2        &kp N3          &kp KP_ENTER  &trans
-          &trans  &trans  &trans  &trans    &trans                 &trans  &trans  &trans    &to FN  &trans  &kp N0                 &kp PG_UP    &kp PG_DN     &kp KP_DOT      &kp KP_ENTER  &trans
+          &kp BSLH   &sym1      &sym2      &sym3     &sym4     &sym5     &kp LC(X)                                                         &mo MOD     &sym6  &sym7   &sym8     &sym9    &sym0      &kp FSLH
+          &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y     &kp LC(C)                                                         &kp INS     &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
+          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &kp LC(V)     &kp LCTRL  &td_fn     &td_fn    &kp RCTRL           &kp K_CMENU &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
+          &to NUM    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                              &kp LGUI   &kp RGUI                                  &kp B  &kp M   &kp W     &kp V    &kp Z      &to NUM
+          &mo FN     &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT              &bspc_del  &kp RSHFT  &mo LALT   &kp LALT  &mt LSHFT ENTER  &kp SPACE             &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
         >;
       };
 
       layer_fn {
         bindings = <
-          &trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &none                                                 &mo MOD  &trans  &trans    &trans    &trans  &trans  &trans
-          &trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &none                                                 &none    &trans  &trans    &trans    &trans  &trans  &trans
-          &trans  &trans  &kp F4   &kp F5   &kp F6   &trans  &none        &trans  &trans    &trans   &trans        &none    &trans  &kp LALT  &kp RGUI  &trans  &trans  &trans
-          &trans  &trans  &kp F1   &kp F2   &kp F3   &trans                       &trans    &trans                          &trans  &trans    &trans    &trans  &trans  &to 0
-          &trans  &trans  &trans   &trans   &trans                &trans  &trans  &trans    &to NUM  &trans  &trans                 &trans    &trans    &trans  &trans  &trans
+          &trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &none                                                &mo MOD  &trans  &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans        &trans
+          &trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &none                                                &none    &trans  &kp N7       &kp N8        &kp N9          &kp KP_MINUS  &trans
+          &trans  &trans  &kp F4   &kp F5   &kp F6   &trans  &none        &trans  &to 0     &to 0   &trans        &none    &trans  &kp N4       &kp N5        &kp N6          &kp KP_PLUS   &trans
+          &to 0   &trans  &kp F1   &kp F2   &kp F3   &trans                       &trans    &trans                         &trans  &kp N1       &kp N2        &kp N3          &kp KP_ENTER  &to 0
+          &trans  &trans  &trans  &trans    &trans                &trans  &trans  &trans    &trans  &trans  &kp N0                 &kp PG_UP    &kp PG_DN     &kp KP_DOT      &kp KP_ENTER  &trans
         >;
       };
 
-      layer_media {
+      layer_num {
         bindings = <
-          &trans  &trans  &trans      &trans    &trans    &trans   &none                                                &mo MOD &trans  &trans       &trans       &trans       &trans  &trans
-          &trans  &trans  &kp PSCRN   &kp INS   &kp SLCK  &trans   &none                                                &none   &trans  &trans       &kp K_CMENU  &trans       &trans  &trans
-          &trans  &trans  &kp TSKMNG  &kp PSCRN &kp SLCK  &trans   &none        &trans  &trans    &trans  &trans        &none   &trans  &kp C_PREV   &kp C_PP     &kp C_NEXT   &trans  &trans
-          &trans  &trans  &trans      &trans    &trans    &trans                        &trans    &trans                        &trans  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &trans  &trans
-          &trans  &trans  &trans      &kp HOME  &kp END                 &trans  &trans  &trans    &trans  &trans  &trans                &kp PG_UP    &kp PG_DN    &trans       &trans  &trans
+          &trans  &trans  &trans      &trans     &trans       &trans  &none                                                 &mo MOD  &trans  &trans        &trans      &trans        &trans  &trans
+          &trans  &trans  &kp TSKMNG  &kp PSCRN  &kp K_CMENU  &trans  &none                                                 &none    &trans  &kp C_PREV    &kp C_PP    &kp C_NEXT    &trans  &trans
+          &trans  &kp N1  &kp N2      &kp N3     &kp N4       &kp N5  &none        &trans  &to 0     &to 0    &trans        &none    &kp N6  &kp N7        &kp N8      &kp N9        &kp N0  &trans
+          &to 0   &trans  &trans      &trans     &trans       &trans                       &trans    &trans                          &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &to 0
+          &trans  &trans  &trans      &trans     &trans                    &trans  &trans  &trans    &trans   &trans  &trans                 &trans        &trans      &trans        &trans  &trans
         >;
       };
 
