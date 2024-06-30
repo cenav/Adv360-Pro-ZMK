@@ -134,6 +134,77 @@
         bindings = <&kp>, <&sym2>;
       };
 
+      sn3: symbol_number_3 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping_term_ms = <135>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&sym3>;
+      };
+
+      sn4: symbol_number_4 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping_term_ms = <135>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&sym4>;
+      };
+
+      sn5: symbol_number_5 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping_term_ms = <135>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&sym5>;
+      };
+
+      sn6: symbol_number_6 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping_term_ms = <135>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&sym6>;
+      };
+
+      sn7: symbol_number_7 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping_term_ms = <135>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&sym7>;
+      };
+
+      sn8: symbol_number_8 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping_term_ms = <135>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&sym8>;
+      };
+
+      sn9: symbol_number_9 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping_term_ms = <135>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&sym9>;
+      };
+
+      sn0: symbol_number_0 {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping_term_ms = <135>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&sym0>;
+      };
     };
 
     combos {
@@ -158,11 +229,11 @@
 
       default_layer {
         bindings = <
-          &kp BSLH   &sn1 N1 0  &sn2 N2 0  &sym3     &sym4     &sym5    &kp LC(X)                                                          &mo MOD      &sym6     &sym7    &sym8     &sym9      &sym0      &kp FSLH
-          &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y    &kp LC(C)                                                          &kp INS      &kp F     &kp G    &kp C     &kp R      &kp L      &kp MINUS
-          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I    &kp LC(V)     &kp LCTRL  &kp LALT   &kp LALT  &kp RCTRL            &kp K_CMENU  &kp D     &kp H    &kp T     &kp N      &kp S      &kp TAB
-          &to NUM    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                             &kp LGUI   &kp RGUI                                    &kp B     &kp M    &kp W     &kp V      &kp Z      &to FN
-          &mo NUM    &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT             &bspc_del  &kp RSHFT  &mo MEDIA  &to NUM   &mt LSHFT ENTER  &kp SPACE                  &kp UP   &kp DOWN  &kp END    &kp PG_DN  &mo FN
+          &kp BSLH   &sn1 N1 0  &sn2 N2 0  &sn3 N3 0 &sn4 N4 0 &sn5 N5 0 &kp LC(X)                                                         &mo MOD     &sn6 N6 0 &sn7 N7 0 &sn8 N8 0 &sn9 N9 0  &sn0 N0 0  &kp FSLH
+          &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y     &kp LC(C)                                                         &kp INS     &kp F     &kp G     &kp C     &kp R      &kp L      &kp MINUS
+          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &kp LC(V)     &kp LCTRL &kp LALT   &kp LALT  &kp RCTRL            &kp K_CMENU &kp D     &kp H     &kp T     &kp N      &kp S      &kp TAB
+          &to NUM    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                             &kp LGUI   &kp RGUI                                   &kp B     &kp M     &kp W     &kp V      &kp Z      &to FN
+          &mo NUM    &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT             &bspc_del  &kp RSHFT  &mo MEDIA  &to NUM   &mt LSHFT ENTER  &kp SPACE                 &kp UP    &kp DOWN  &kp END    &kp PG_DN  &mo FN
         >;
       };
 
