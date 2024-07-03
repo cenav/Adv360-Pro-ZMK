@@ -146,9 +146,9 @@
         bindings = <
           &kp BSLH   &sym1      &sym2      &sym3     &sym4     &sym5     &kp LC(X)                                                         &mo MOD     &sym6  &sym7   &sym8     &sym9    &sym0      &kp FSLH
           &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y     &kp LC(C)                                                         &kp INS     &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
-          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &kp LC(V)     &kp LCTRL  &td_fn     &td_fn    &kp RCTRL           &kp K_CMENU &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
-          &to NUM    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                              &kp LGUI   &kp RGUI                                  &kp B  &kp M   &kp W     &kp V    &kp Z      &to NUM
-          &mo FN     &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT              &bspc_del  &kp RSHFT  &kp LALT   &kp LALT  &mt LSHFT ENTER  &kp SPACE             &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
+          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &kp LC(V)     &kp LCTRL  &kp LALT   &kp LALT    &kp RCTRL         &kp K_CMENU &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
+          &to NUM    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                              &td_fn     &td_fn                                    &kp B  &kp M   &kp W     &kp V    &kp Z      &to NUM
+          &mo FN     &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT              &bspc_del  &kp RSHFT  &kp LGUI   &kp RGUI  &mt LSHFT ENTER  &kp SPACE             &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
         >;
       };
 
