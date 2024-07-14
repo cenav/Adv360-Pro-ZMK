@@ -68,42 +68,42 @@
       sym3: symbol_3 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp LEFT_BRACE>, <&kp PERCENT>;
+          bindings = <&kp LEFT_BRACE>, <&kp HASH>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym4: symbol_4 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp LEFT_PARENTHESIS>, <&kp EXCLAMATION>;
+          bindings = <&kp LEFT_PARENTHESIS>, <&kp PERCENT>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym5: symdol_5 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp PLUS>, <&kp AMPERSAND>;
+          bindings = <&kp UNDERSCORE>, <&kp MINUS>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym6: symbol_6 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp STAR>, <&kp HASH>;
+          bindings = <&kp EQUAL>, <&kp PLUS>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym7: symbol_7 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp RIGHT_PARENTHESIS>, <&kp EQUAL>;
+          bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPERSAND>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym8: symbol_8 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp RIGHT_BRACE>, <&kp UNDERSCORE>;
+          bindings = <&kp RIGHT_BRACE>, <&kp STAR>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
