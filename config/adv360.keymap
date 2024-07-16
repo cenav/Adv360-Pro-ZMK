@@ -68,7 +68,7 @@
       sym3: symbol_3 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp LEFT_BRACE>, <&kp HASH>;
+          bindings = <&kp LEFT_BRACE>, <&kp MINUS>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -82,7 +82,7 @@
       sym5: symdol_5 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp UNDERSCORE>, <&kp MINUS>;
+          bindings = <&kp STAR>, <&kp HASH>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -103,7 +103,7 @@
       sym8: symbol_8 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp RIGHT_BRACE>, <&kp STAR>;
+          bindings = <&kp RIGHT_BRACE>, <&kp UNDERSCORE>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
