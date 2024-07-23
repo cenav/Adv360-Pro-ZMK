@@ -174,7 +174,7 @@
           &kp TAB     &kp Q     &kp W     &kp E      &kp R   &kp T    &kp Y                                                       &tog GAME  &none   &none     &none      &none      &none   &none
           &kp BSPC    &kp A     &kp S     &kp D      &kp F   &kp G    &kp H         &kp LCTRL &kp LALT   &kp LGUI   &kp RCTRL     &none      &none   &none     &none      &none      &none   &none
           &kp LSHFT   &kp Z     &kp X     &kp C      &kp V   &kp B                            &kp INS    &kp PG_UP                           &none   &none     &none      &none      &none   &none
-          &to GAME2   &kp COMMA &kp DOT   &kp LBKT   &kp RBKT             &kp SPACE &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP    &kp DOWN   &none      &none   &mo GAMEFN
+          &to GAME2   &kp COMMA &kp DOT   &kp LBKT   &kp RBKT             &kp SPACE &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP    &kp DOWN   &none      &none   &none
         >;
       };
 
@@ -184,7 +184,7 @@
           &kp TAB     &kp Q     &kp W     &kp E      &kp R   &kp T    &kp Y                                                       &tog GAME  &none   &none     &none      &none      &none   &none
           &kp BSPC    &kp A     &kp S     &kp D      &kp F   &kp G    &kp H         &kp LCTRL &kp LALT   &kp LGUI   &kp RCTRL     &none      &none   &none     &none      &none      &none   &none
           &kp LSHFT   &kp Z     &kp X     &kp C      &kp V   &kp B                            &kp INS    &kp PG_UP                           &none   &none     &none      &none      &none   &none
-          &to GAME    &kp COMMA &kp DOT   &kp LBKT   &kp RBKT             &kp SPACE &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP    &kp DOWN   &none      &none   &mo GAMEFN
+          &to GAME    &kp COMMA &kp DOT   &kp LBKT   &kp RBKT             &kp SPACE &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP    &kp DOWN   &none      &none   &none
         >;
       };
 
