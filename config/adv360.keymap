@@ -131,7 +131,7 @@
         bindings = <
           &kp BSLH   &sym1      &sym2      &sym3     &sym4     &sym5     &kp LC(C)                                                        &mo MOD   &sym6  &sym7   &sym8     &sym9    &sym0      &kp FSLH
           &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y     &kp LC(V)                                                        &kp MENU  &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
-          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &to NUM       &kp LCTRL  &kp LALT   &kp LALT  &kp RCTRL          &to NUM   &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
+          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &kp RGUI      &kp LCTRL  &kp LALT   &kp LALT  &kp RCTRL          &to NUM   &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
           &kp DEL    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                              &td_num    &td_num                                &kp B  &kp M   &kp W     &kp V    &kp Z      &kp INS
           &mo FN     &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT              &bspc_del  &kp RSHFT  &mo WIN    &mo WIN   &mt LSHFT ENTER  &kp SPACE          &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo FN
         >;
@@ -161,7 +161,7 @@
         bindings = <
           &trans  &kp RG(N1)     &kp RG(N2)    &kp RG(N3)    &kp RG(N4)     &kp RG(N5)  &none                                                             &mo MOD  &kp RG(N6)  &kp RG(N7)  &kp RG(N8)    &kp RG(N9)   &kp RG(N0)     &trans
           &trans  &kp RG(SQT)    &kp RG(COMMA) &kp RG(DOT)   &kp RG(P)      &kp RG(Y)   &none                                                             &none    &none       &none       &none         &none        &kp RG(L)      &trans
-          &trans  &kp RG(A)      &kp RG(O)     &kp RG(E)     &kp RG(U)      &kp RG(I)   &to 0        &trans         &trans    &trans  &trans              &to 0    &none       &none       &none         &none        &none          &trans
+          &trans  &kp RG(A)      &kp RG(O)     &kp RG(E)     &kp RG(U)      &kp RG(I)   &none        &trans         &trans    &trans  &trans              &none    &none       &none       &none         &none        &none          &trans
           &trans  &kp RG(SEMI)   &kp RG(Q)     &kp RG(J)     &kp RG(K)      &kp RG(X)                               &to 0     &to 0                                &none       &none       &none         &none        &none          &trans
           &trans  &kp RG(PG_UP)  &kp RG(HOME)  &kp RG(LEFT)  &kp RG(RIGHT)                   &trans  &kp RG(RSHFT)  &trans    &trans  &kp RG(RSHFT) &trans                     &kp RG(UP)  &kp RG(DOWN)  &kp RG(END)  &kp RG(PG_DN)  &trans
         >;
