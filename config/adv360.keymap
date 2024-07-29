@@ -48,7 +48,7 @@
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&mo NUM>, <&to NUM>;
+        bindings = <&mo FN>, <&to FN>;
       };
 
       td_win: tap_dance_win {
