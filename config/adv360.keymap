@@ -7,8 +7,9 @@
 #define DEFAULT 0
 #define FN 1
 #define WIN 2
-#define GAME 3
-#define MOD 4
+#define RTS 3
+#define FPS 4
+#define MOD 5
 
 #define HYPER LS(LC(LA(LGUI)))
 #define MEH LS(LC(LA))
@@ -137,7 +138,7 @@
       default_layer {
         bindings = <
           &kp BSLH   &sym1      &sym2      &sym3     &sym4     &sym5     &kp LC(X)                                                        &mo MOD    &sym6  &sym7   &sym8     &sym9    &sym0      &kp FSLH
-          &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y     &kp LC(C)                                                        &to GAME   &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
+          &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y     &kp LC(C)                                                        &to RTS    &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
           &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &kp LC(V)     &kp LCTRL  &kp LALT   &kp LALT  &kp RCTRL          &kp MENU   &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
           &kp DEL    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                              &td_fn     &td_win                                 &kp B  &kp M   &kp W     &kp V    &kp Z      &kp INS
           &td_fn     &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT              &bspc_del  &kp RSHFT  &none      &none     &mt LSHFT ENTER  &kp SPACE           &kp UP  &kp DOWN  &kp END  &kp PG_DN  &td_fn
@@ -164,13 +165,23 @@
         >;
       };
 
-      layer_game {
+      layer_rts {
         bindings = <
-          &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5 &none                                                           &none &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-          &kp TAB    &kp T      &kp Q     &kp W     &kp E      &kp R  &none                                                           &to 0 &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-          &kp ESC    &kp G      &kp A     &kp S     &kp D      &kp F  &none          &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-          &kp LSHFT  &kp B      &kp Z     &kp X     &kp C      &kp V                           &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-          &kp LCTRL  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT              &kp SPACE &kp LSHFT &kp END  &kp PG_DN &kp ENTER &kp BSPC               &kp UP &kp DOWN  &kp LBKT &kp RBKT &kp RCTRL
+          &kp ESC     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5   &kp N6                                                      &none    &kp N6  &kp N7    &kp N8     &kp N9     &kp N0  &none
+          &kp TAB     &kp Q     &kp W     &kp E      &kp R   &kp T    &kp Y                                                       &to 0    &none   &none     &none      &none      &none   &none
+          &kp BSPC    &kp A     &kp S     &kp D      &kp F   &kp G    &kp H         &kp LCTRL &kp LALT   &kp LGUI   &kp RCTRL     &to FPS  &none   &none     &none      &none      &none   &none
+          &kp LSHFT   &kp Z     &kp X     &kp C      &kp V   &kp B                            &kp INS    &kp PG_UP                         &none   &none     &none      &none      &none   &none
+          &kp LCTRL   &kp COMMA &kp DOT   &kp LBKT   &kp RBKT             &kp SPACE &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE           &kp UP    &kp DOWN   &none      &none   &none
+        >;
+      };
+
+      layer_fps {
+        bindings = <
+          &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5 &none                                                           &none   &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+          &kp TAB    &kp T      &kp Q     &kp W     &kp E      &kp R  &none                                                           &to 0   &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+          &kp ESC    &kp G      &kp A     &kp S     &kp D      &kp F  &none          &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &to RTS &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+          &kp LSHFT  &kp B      &kp Z     &kp X     &kp C      &kp V                           &kp HOME &kp PG_UP                             &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+          &kp LCTRL  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT              &kp SPACE &kp LSHFT &kp END  &kp PG_DN &kp ENTER &kp BSPC                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &kp RCTRL
         >;
       };
 
