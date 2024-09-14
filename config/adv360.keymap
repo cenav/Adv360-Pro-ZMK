@@ -8,9 +8,8 @@
 #define FN 1
 #define WIN 2
 #define RTS 3
-#define RTA 4
-#define RTF 5
-#define MOD 6
+#define RTF 4
+#define MOD 5
 
 #define HYPER LC(LS(LA(LGUI)))
 //#define MEH LS(LC(LA))
@@ -173,27 +172,17 @@
           &kp TAB     &kp Q      &kp W     &kp E      &kp R     &kp T    &kp Y                                                          &to 0    &none   &none     &none      &none      &none   &none
           &kp BSPC    &kp A      &kp S     &kp D      &kp F     &kp G    &kp H        &kp LCTRL &kp LALT   &kp LGUI   &kp RCTRL         &none    &none   &none     &none      &none      &none   &none
           &kp LSHFT   &kp Z      &kp X     &kp C      &kp V     &kp B                           &kp INS    &kp PG_UP                             &none   &none     &none      &none      &none   &none
-          &mo RTF     &kp COMMA  &kp DOT   &kp LBKT   &kp RBKT               &to RTA  &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE               &kp UP    &kp DOWN   &none      &none   &none
-        >;
-      };
-
-      layer_rta {
-        bindings = <
-          &kp ESC     &kp N6     &kp N7    &kp N8     &kp N9    &kp N0   &kp HOME                                                       &none    &kp N6  &kp N7    &kp N8     &kp N9     &kp N0  &none
-          &kp TAB     &kp Q      &kp W     &kp E      &kp R     &kp T    &kp Y                                                          &to 0    &none   &none     &none      &none      &none   &none
-          &kp BSPC    MEH(A)     MEH(S)    MEH(D)     MEH(F)    MEH(G)   &kp H        &kp LCTRL &kp LALT   &kp LGUI   &kp RCTRL         &none    &none   &none     &none      &none      &none   &none
-          &kp LSHFT   &kp Z      &kp X     &kp C      &kp V     &kp B                           &kp INS    &kp PG_UP                             &none   &none     &none      &none      &none   &none
-          &kp LCTRL   &kp F1     &kp F2    &kp F3     &kp F4                 &to RTS  &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE               &kp UP    &kp DOWN   &none      &none   &none
+          &kp SPACE   &kp COMMA  &kp DOT   &kp LBKT   &kp RBKT               &mo RTF  &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE               &kp UP    &kp DOWN   &none      &none   &none
         >;
       };
 
       layer_rtf {
         bindings = <
           &kp ESC     &kp F1     &kp F2    &kp F3     &kp F4    &kp F5   &kp HOME                                                       &none    &kp N6  &kp N7    &kp N8     &kp N9     &kp N0  &none
-          &kp TAB     &kp Q      &kp W     &kp E      &kp R     &kp T    &kp Y                                                          &to 0    &none   &none     &none      &none      &none   &none
+          &kp TAB     MEH(Q)     MEH(W)    MEH(E)     MEH(R)    MEH(T)   &kp Y                                                          &to 0    &none   &none     &none      &none      &none   &none
           &kp BSPC    MEH(A)     MEH(S)    MEH(D)     MEH(F)    MEH(G)   &kp H        &kp LCTRL &kp LALT   &kp LGUI   &kp RCTRL         &none    &none   &none     &none      &none      &none   &none
-          &kp LSHFT   &kp Z      &kp X     &kp C      &kp V     &kp B                           &kp INS    &kp PG_UP                             &none   &none     &none      &none      &none   &none
-          &kp LCTRL   &kp F1     &kp F2    &kp F3     &kp F4                 &trans   &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE               &kp UP    &kp DOWN   &none      &none   &none
+          &kp LSHFT   MEH(Z)     MEH(X)    MEH(C)     MEH(V)    MEH(B)                          &kp INS    &kp PG_UP                             &none   &none     &none      &none      &none   &none
+          &kp LCTRL   &kp F6     &kp F7    &kp F8     &kp F9                 &trans   &kp LSHFT &kp DEL    &kp PG_DN  &kp ENTER  &kp SPACE               &kp UP    &kp DOWN   &none      &none   &none
         >;
       };
 
