@@ -61,7 +61,7 @@
       sym1: symbol_1 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp EXCLAMATION>, <&kp AT>;
+          bindings = <&kp EXCLAMATION>, <&kp PIPE>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -124,7 +124,7 @@
       sym0: symbol_0 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp QUESTION>, <&macro_pound>;
+          bindings = <&kp QUESTION>, <& AT>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
