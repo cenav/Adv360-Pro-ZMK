@@ -124,7 +124,7 @@
       sym0: symbol_0 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp QUESTION>, <&kp U_BF>;
+          bindings = <&kp QUESTION>, <&macro_pound>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
