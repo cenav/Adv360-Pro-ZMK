@@ -34,7 +34,7 @@
     #binding-cells = <0>;
     bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
   };
-  macro_pound: macro_kinesis {
+  macro_pound: macro_pound {
     wait-ms = <40>;
     tap-ms = <40>;
     bindings
