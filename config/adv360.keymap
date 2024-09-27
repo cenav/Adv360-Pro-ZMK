@@ -59,80 +59,81 @@
       };
 
       sym1: symbol_1 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp EXCLAMATION>, <&kp PIPE>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp EXCLAMATION>, <&kp PIPE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym2: symbol_2 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp LEFT_BRACKET>, <&kp CARET>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_BRACKET>, <&kp CARET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym3: symbol_3 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp LEFT_BRACE>, <&kp MINUS>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_BRACE>, <&kp MINUS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym4: symbol_4 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp LEFT_PARENTHESIS>, <&kp PERCENT>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_PARENTHESIS>, <&kp PERCENT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym5: symdol_5 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp STAR>, <&kp HASH>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp STAR>, <&kp HASH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym6: symbol_6 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp EQUAL>, <&kp PLUS>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp EQUAL>, <&kp PLUS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym7: symbol_7 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPERSAND>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPERSAND>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym8: symbol_8 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp RIGHT_BRACE>, <&kp UNDERSCORE>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp RIGHT_BRACE>, <&kp UNDERSCORE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym9: symbol_9 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp RIGHT_BRACKET>, <&kp DOLLAR>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp RIGHT_BRACKET>, <&kp DOLLAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       sym0: symbol_0 {
-          compatible = "zmk,behavior-mod-morph";
-          #binding-cells = <0>;
-          bindings = <&kp QUESTION>, <&kp AT>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp QUESTION>, <&kp AT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
       mt_a: modtap_a {
-        compatible = "zmk,behavior-mod-tap";
-        hold-trigger-key-positions = <1>;
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&macro_acute_a, &kp A>;
+        flavor = "hold-preferred";
+        bindings = <&macro_acute_a>, <&kp A>;
       };
 
     };
