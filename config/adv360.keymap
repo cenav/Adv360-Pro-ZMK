@@ -124,7 +124,7 @@
       sym0: symbol_0 {
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
-          bindings = <&kp QUESTION>, <& AT>;
+          bindings = <&kp QUESTION>, <&kp AT>;
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
@@ -147,7 +147,7 @@
         bindings = <
           &kp TSKMNG  &trans  &kp F10     &kp F11   &kp F12     &trans  &none                                                &mo MOD  &trans  &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans        &kp C_AL_CALC
           &trans      &trans  &kp F7      &kp F8    &kp F9      &trans  &none                                                &none    &trans  &kp N7       &kp N8        &kp N9          &kp KP_MINUS  &trans
-          &trans      &trans  &kp F4      &kp F5    &kp F6      &trans  &none        &trans  &trans    &trans  &trans        &none    &trans  &kp N4       &kp N5        &kp N6          &kp KP_PLUS   &trans
+          &trans      &macro_pound  &kp F4      &kp F5    &kp F6      &trans  &none        &trans  &trans    &trans  &trans        &none    &trans  &kp N4       &kp N5        &kp N6          &kp KP_PLUS   &trans
           &trans      &trans  &kp F1      &kp F2    &kp F3      &trans                       &to 0     &trans                         &trans  &kp N1       &kp N2        &kp N3          &kp KP_ENTER  &trans
           &to 0       &trans  &kp C_PREV  &kp C_PP  &kp C_NEXT               &trans  &trans  &trans    &trans  &trans  &kp N0                 &kp C_VOL_UP &kp C_VOL_DN  &kp KP_DOT      &kp C_MUTE    &to 0
         >;
