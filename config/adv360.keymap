@@ -128,11 +128,11 @@
           mods = <(MOD_LSFT|MOD_RSFT)>;
       };
 
-      mt_a: mt_a {
+      mt_a: modtap_a {
         compatible = "zmk,behavior-mod-tap";
         hold-trigger-key-positions = <1>;
         tapping-term-ms = <200>;
-        bindings = <&macro_acute_a &kp A>;
+        bindings = <&macro_acute_a, &kp A>;
       };
 
     };
