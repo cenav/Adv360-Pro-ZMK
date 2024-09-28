@@ -7,7 +7,8 @@
 #define DEFAULT 0
 #define FN 1
 #define WIN 2
-#define MOD 3
+#define UNI 4
+#define MOD 5
 
 #define HYPER LS(LC(LA(LGUI)))
 #define MEH LS(LC(LA))
@@ -146,9 +147,9 @@
         bindings = <
           &kp BSLH   &sym1      &sym2      &sym3     &sym4     &sym5     &kp LC(X)                                                        &mo MOD    &sym6  &sym7   &sym8     &sym9    &sym0      &kp FSLH
           &kp GRAVE  &kp SQT    &kp COMMA  &kp DOT   &kp P     &kp Y     &kp LC(C)                                                        &kp PSCRN  &kp F  &kp G   &kp C     &kp R    &kp L      &kp MINUS
-          &kp ESC    &mt macro_acute_a A      &kp O      &kp E     &kp U     &kp I     &kp LC(V)     &kp LCTRL  &kp LALT   &kp LALT  &kp RCTRL          &kp MENU   &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
-          &kp DEL    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                              &td_fn     &td_win                                 &kp B  &kp M   &kp W     &kp V    &kp Z      &kp INS
-          &td_fn     &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT              &bspc_del  &kp RSHFT  &none      &none     &mt LSHFT ENTER  &kp SPACE           &kp UP  &kp DOWN  &kp END  &kp PG_DN  &td_fn
+          &kp ESC    &kp A      &kp O      &kp E     &kp U     &kp I     &kp LC(V)     &kp LCTRL  &kp LALT   &kp LALT  &kp RCTRL          &kp MENU   &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
+          &mo UNI    &kp SEMI   &kp Q      &kp J     &kp K     &kp X                              &td_fn     &td_win                                 &kp B  &kp M   &kp W     &kp V    &kp Z      &mo UNI
+          &td_fn     &kp PG_UP  &kp HOME   &kp LEFT  &kp RIGHT              &bspc_del  &kp RSHFT  &kp DEL    &kp INS   &mt LSHFT ENTER  &kp SPACE           &kp UP  &kp DOWN  &kp END  &kp PG_DN  &td_fn
         >;
       };
 
@@ -169,6 +170,16 @@
           &trans  &kp RG(A)      &kp RG(O)     &kp RG(E)     &kp RG(U)      &kp RG(I)   &none        &trans         &trans    &trans  &trans              &none    &kp RG(D)   &kp RG(H)   &kp RG(T)     &kp RG(N)    &kp RG(S)      &trans
           &trans  &kp RG(SEMI)   &kp RG(Q)     &kp RG(J)     &kp RG(K)      &kp RG(X)                               &trans    &trans                               &kp RG(B)   &kp RG(M)   &kp RG(W)     &kp RG(V)    &kp RG(Z)      &trans
           &trans  &kp RG(PG_UP)  &kp RG(HOME)  &kp RG(LEFT)  &kp RG(RIGHT)                   &trans  &kp RG(RSHFT)  &trans    &trans  &kp RG(RSHFT) &trans                     &kp RG(UP)  &kp RG(DOWN)  &kp RG(END)  &kp RG(PG_DN)  &trans
+        >;
+      };
+
+      layer_uni {
+        bindings = <
+          &trans  &trans  &kp F10     &kp F11   &kp F12     &trans  &none                                                &mo MOD  &trans  &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &trans        &kp C_AL_CALC
+          &trans  &trans  &kp F7      &kp F8    &kp F9      &trans  &none                                                &none    &trans  &kp N7       &kp N8        &kp N9          &kp KP_MINUS  &trans
+          &trans  &macro_aa  &kp F4      &kp F5    &kp F6      &trans  &none        &trans  &trans    &trans  &trans        &none    &trans  &kp N4       &kp N5        &kp N6          &kp KP_PLUS   &trans
+          &trans  &trans  &kp F1      &kp F2    &kp F3      &trans                       &trans     &trans                         &trans  &kp N1       &kp N2        &kp N3          &kp KP_ENTER  &trans
+          &trans  &trans  &kp C_PREV  &kp C_PP  &kp C_NEXT               &trans  &trans  &trans    &trans  &trans  &kp N0                 &kp C_VOL_UP &kp C_VOL_DN  &kp KP_DOT      &kp C_MUTE    &trans
         >;
       };
 

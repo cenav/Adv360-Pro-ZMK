@@ -34,7 +34,7 @@
     #binding-cells = <0>;
     bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
   };
-  macro_acute_a: macro_acute_a {
+  macro_aa: macro_acute_a {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     wait-ms = <40>;
@@ -45,7 +45,7 @@
     , <&macro_release &kp LALT>
     ;
   };
-  macro_inverted_qmark: macro_inverted_qmark {
+  macro_iqmark: macro_inverted_qmark {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     wait-ms = <40>;
