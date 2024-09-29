@@ -56,7 +56,7 @@
     , <&macro_release &kp LALT>
     ;
   };
-  macro_pound: macro_pound_symbol {
+  macro_pound: macro_pound {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     wait-ms = <40>;
