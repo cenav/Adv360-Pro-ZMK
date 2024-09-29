@@ -7,8 +7,8 @@
 #define DEFAULT 0
 #define FN 1
 #define WIN 2
-#define UNI 4
-#define MOD 5
+#define UNI 3
+#define MOD 4
 
 #define HYPER LS(LC(LA(LGUI)))
 #define MEH LS(LC(LA))
