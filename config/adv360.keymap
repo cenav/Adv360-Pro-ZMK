@@ -175,11 +175,11 @@
 
       uni_layer {
         bindings = <
-          &trans  &macro_iexcl  &trans     &trans     &trans     &trans     &none                                                &mo MOD  &trans  &trans  &trans  &trans  &macro_iqmark  &trans
-          &trans  &trans        &trans     &trans     &trans     &trans     &none                                                &none    &trans  &trans  &trans  &trans  &trans         &trans
-          &trans  &macro_aa     &macro_ao  &macro_ae  &macro_au  &macro_ai  &none        &trans  &trans    &trans  &trans        &none    &trans  &trans  &trans  &trans  &macro_tn      &trans
-          &trans  &trans        &trans     &trans     &trans     &trans                          &trans    &trans                         &trans  &trans  &trans  &trans  &trans         &trans
-          &trans  &trans        &trans     &trans     &trans                     &trans  &trans  &trans    &trans  &trans  &kp N0                 &trans  &trans  &trans  &trans         &trans
+          &trans  &macro_iexcl  &trans     &trans     &trans     &trans     &none                                                &mo MOD  &trans  &trans  &trans  &trans     &macro_iqmark  &trans
+          &trans  &trans        &trans     &trans     &trans     &trans     &none                                                &none    &trans  &trans  &trans  &trans     &trans         &trans
+          &trans  &macro_aa     &macro_ao  &macro_ae  &macro_au  &macro_ai  &none        &trans  &trans    &trans  &trans        &none    &trans  &trans  &trans  &macro_tn  &trans         &trans
+          &trans  &trans        &trans     &trans     &trans     &trans                          &trans    &trans                         &trans  &trans  &trans  &trans     &trans         &trans
+          &trans  &trans        &trans     &trans     &trans                     &trans  &trans  &trans    &trans  &trans  &kp N0                 &trans  &trans  &trans     &trans         &trans
         >;
       };
 
