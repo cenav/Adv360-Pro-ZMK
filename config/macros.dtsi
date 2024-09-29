@@ -37,33 +37,88 @@
   macro_aa: macro_acute_a {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <40>;
-    tap-ms = <40>;
+    wait-ms = <30>;
+    tap-ms = <30>;
     bindings
     = <&macro_press   &kp LALT>
     , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N5>
     , <&macro_release &kp LALT>
     ;
   };
+  macro_ae: macro_acute_e {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings
+    = <&macro_press   &kp LALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N3>
+    , <&macro_release &kp LALT>
+    ;
+  };
+  macro_ai: macro_acute_i {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings
+    = <&macro_press   &kp LALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7>
+    , <&macro_release &kp LALT>
+    ;
+  };
+  macro_ao: macro_acute_o {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings
+    = <&macro_press   &kp LALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N3>
+    , <&macro_release &kp LALT>
+    ;
+  };
+  macro_au: macro_acute_u {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings
+    = <&macro_press   &kp LALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N0>
+    , <&macro_release &kp LALT>
+    ;
+  };
   macro_iqmark: macro_inverted_qmark {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <40>;
-    tap-ms = <40>;
+    wait-ms = <30>;
+    tap-ms = <30>;
     bindings
     = <&macro_press   &kp LALT>
     , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N1>
     , <&macro_release &kp LALT>
     ;
   };
-  macro_pound: macro_pound_symbol {
+  macro_iexcl: macro_inverted_exclamation {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <40>;
-    tap-ms = <40>;
+    wait-ms = <30>;
+    tap-ms = <30>;
     bindings
     = <&macro_press   &kp LALT>
-    , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N3>
+    , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N1>
+    , <&macro_release &kp LALT>
+    ;
+  };
+  macro_tn: macro_tilde_n {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings
+    = <&macro_press   &kp LALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N1>
     , <&macro_release &kp LALT>
     ;
   };
