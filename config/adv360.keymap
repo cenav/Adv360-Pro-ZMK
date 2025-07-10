@@ -21,7 +21,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        bspc_del: bspc_del {
+        bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             label = "BSPC_DEL";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
@@ -31,18 +31,18 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        dot_under: dot_under {
+        dot_und: dot_under {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_UNDER";
+            label = "DOT_UND";
             bindings = <&kp DOT>, <&kp UNDER>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        comma_min: comma_min {
+        com_min: comma_minus {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_MIN";
+            label = "COM_MIN";
             bindings = <&kp COMMA>, <&kp MINUS>;
 
             #binding-cells = <0>;
@@ -53,14 +53,14 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default {
             display-name = "Base";
             bindings = <
-&kp BACKSLASH  &kp N1       &kp N2      &kp N3      &kp N4     &kp N5  &kp LC(C)                                                           &mo 3            &kp N6  &kp N7  &kp N8    &kp N9   &kp N0         &kp SLASH
-&kp DELETE     &kp APOS     &comma_min  &dot_under  &kp P      &kp Y   &kp LC(V)                                                           &kp PRINTSCREEN  &kp F   &kp G   &kp C     &kp R    &kp L          &kp INS
-&kp ESC        &kp A        &kp O       &kp E       &kp U      &kp I   &mkp LCLK  &kp LCTRL       &kp LALT      &kp LGUI  &kp RCTRL        &kp C_MENU       &kp D   &kp H   &kp T     &kp N    &kp S          &kp TAB
-&caps_word     &kp SEMI     &kp Q       &kp J       &kp K      &kp X                              &mo 2         &mo 2                                       &kp B   &kp M   &kp W     &kp V    &kp Z          &caps_word
-&mo 1          &kp PAGE_UP  &kp HOME    &kp LEFT    &kp RIGHT          &bspc_del  &kp LEFT_SHIFT  &kp LGUI      &kp LALT  &mt RSHFT ENTER  &kp SPACE                &kp UP  &kp DOWN  &kp END  &kp PAGE_DOWN  &mo 1
+&kp BSLH    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &kp LC(C)                                                      &mo 3       &kp N6  &kp N7  &kp N8    &kp N9   &kp N0     &kp SLASH
+&kp DEL     &kp SQT    &com_min  &dot_und  &kp P      &kp Y   &kp LC(V)                                                      &kp PSCRN   &kp F   &kp G   &kp C     &kp R    &kp L      &kp INS
+&kp ESC     &kp A      &kp O     &kp E     &kp U      &kp I   &mkp LCLK  &kp LCTRL  &kp LALT      &kp LGUI  &kp RCTRL        &kp C_MENU  &kp D   &kp H   &kp T     &kp N    &kp S      &kp TAB
+&caps_word  &kp SEMI   &kp Q     &kp J     &kp K      &kp X                         &mo 2         &mo 2                                  &kp B   &kp M   &kp W     &kp V    &kp Z      &caps_word
+&mo 1       &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT          &bspc_del  &kp LSHFT  &kp LGUI      &kp LALT  &mt RSHFT ENTER  &kp SPACE           &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo 1
             >;
         };
 
@@ -76,13 +76,13 @@
         };
 
         symbol {
-            display-name = "sym";
+            display-name = "Sym";
             bindings = <
-&none   &kp GRAVE  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp SLASH    &none  &none                                       &mo 3   &none  &none      &kp PLUS       &kp AT            &kp DOT       &none
-&none   &kp TILDE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT  &none  &none                                       &none   &none  &kp HASH   &kp MINUS      &kp STAR          &kp QUESTION  &none
-&none   &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR   &none  &none   &trans  &trans      &trans  &trans  &none   &none  &kp EQUAL  &kp UNDER      &kp COLON         &kp EXCL      &none
-&none   &kp PIPE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI     &none                  &trans      &trans                  &none  &kp AMPS   &kp LESS_THAN  &kp GREATER_THAN  &kp SLASH     &none
-&trans  &trans     &trans                &trans                 &trans              &trans  &trans  &trans      &trans  &trans  &trans         &trans     &trans         &trans            &trans        &trans
+&none   &kp GRAVE  &kp SQT   &kp DQT   &kp SLASH  &none  &none                                       &mo 3   &none  &none      &kp PLUS   &kp AT     &kp DOT    &none
+&none   &kp TILDE  &kp LBKT  &kp RBKT  &kp PRCNT  &none  &none                                       &none   &none  &kp HASH   &kp MINUS  &kp STAR   &kp QMARK  &none
+&none   &kp CARET  &kp LBRC  &kp RBRC  &kp DLLR   &none  &none   &trans  &trans      &trans  &trans  &none   &none  &kp EQUAL  &kp UNDER  &kp COLON  &kp EXCL   &none
+&none   &kp PIPE   &kp LPAR  &kp RPAR  &kp SEMI   &none                  &trans      &trans                  &none  &kp AMPS   &kp LT     &kp GT     &kp SLASH  &none
+&trans  &trans     &trans    &trans    &trans            &trans  &trans  &trans      &trans  &trans  &trans         &trans     &trans     &trans     &trans     &trans
             >;
         };
 
