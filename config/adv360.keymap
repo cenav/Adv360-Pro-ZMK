@@ -48,6 +48,96 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        num1: number_symbol_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM1";
+            bindings = <&kp N1>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num2: number_symbol_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM2";
+            bindings = <&kp N2>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num3: number_symbol_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM3";
+            bindings = <&kp N3>, <&kp LEFT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num4: number_symbol_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM4";
+            bindings = <&kp N4>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num5: number_symbol_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM5";
+            bindings = <&kp N5>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num6: number_symbol_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM6";
+            bindings = <&kp N6>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num7: number_symbol_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM7";
+            bindings = <&kp N7>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num8: number_symbol_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM8";
+            bindings = <&kp N8>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num9: number_symbol_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM9";
+            bindings = <&kp N9>, <&kp DLLR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num0: number_symbol_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NUM0";
+            bindings = <&kp N0>, <&kp STAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -56,33 +146,33 @@
         default {
             display-name = "Base";
             bindings = <
-&kp BSLH    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &kp LC(C)                                                      &mo 3       &kp N6  &kp N7  &kp N8    &kp N9   &kp N0     &kp SLASH
-&kp DEL     &kp SQT    &com_min  &dot_und  &kp P      &kp Y   &kp LC(V)                                                      &kp PSCRN   &kp F   &kp G   &kp C     &kp R    &kp L      &kp INS
-&kp ESC     &kp A      &kp O     &kp E     &kp U      &kp I   &mkp LCLK  &kp LCTRL  &kp LALT      &kp LGUI  &kp RCTRL        &kp C_MENU  &kp D   &kp H   &kp T     &kp N    &kp S      &kp TAB
-&caps_word  &kp SEMI   &kp Q     &kp J     &kp K      &kp X                         &mo 2         &mo 2                                  &kp B   &kp M   &kp W     &kp V    &kp Z      &caps_word
-&mo 1       &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT          &bspc_del  &kp LSHFT  &kp LGUI      &kp LALT  &mt RSHFT ENTER  &kp SPACE           &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo 1
+&kp BSLH   &num1      &num2     &num3     &num4      &num5  &kp LC(C)                                                      &mo 3        &num6  &num7   &num8     &num9    &num0      &kp SLASH
+&kp GRAVE  &kp SQT    &com_min  &dot_und  &kp P      &kp Y  &kp LC(V)                                                      &kp INS      &kp F  &kp G   &kp C     &kp R    &kp L      &kp EQUAL
+&kp ESC    &kp A      &kp O     &kp E     &kp U      &kp I  &mkp LCLK  &kp LCTRL  &kp LALT      &kp LGUI  &kp RCTRL        &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
+&kp DEL    &kp SEMI   &kp Q     &kp J     &kp K      &kp X                        &mo 2         &mo 2                                   &kp B  &kp M   &kp W     &kp V    &kp Z      &caps_word
+&mo 1      &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT         &bspc_del  &kp LSHFT  &kp LGUI      &kp LALT  &mt RSHFT ENTER  &kp SPACE           &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo 1
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&none   &none   &kp F10  &kp F11  &kp F12  &none  &none                                       &mo 3      &none  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &none
-&none   &none   &kp F7   &kp F8   &kp F9   &none  &none                                       &none      &none  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &none
-&none   &none   &kp F4   &kp F5   &kp F6   &none  &none   &trans  &trans      &trans  &trans  &none      &none  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
-&none   &none   &kp F1   &kp F2   &kp F3   &none                  &trans      &trans                     &none  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &none
-&trans  &trans  &trans   &trans   &trans          &trans  &trans  &trans      &trans  &trans  &kp KP_N0         &trans      &trans        &kp KP_DOT     &kp KP_ENTER     &trans
+&none   &none   &kp F10  &kp F11  &kp F12  &none  &kp C_PREV                                      &mo 3      &none  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &none
+&none   &none   &kp F7   &kp F8   &kp F9   &none  &kp C_PP                                        &none      &none  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &none
+&none   &none   &kp F4   &kp F5   &kp F6   &none  &kp C_NEXT  &trans  &trans      &trans  &trans  &none      &none  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
+&none   &none   &kp F1   &kp F2   &kp F3   &none                      &trans      &trans                     &none  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &none
+&trans  &trans  &trans   &trans   &trans          &trans      &trans  &trans      &trans  &trans  &kp KP_N0         &trans      &trans        &kp KP_DOT     &kp KP_ENTER     &trans
             >;
         };
 
         symbol {
             display-name = "Sym";
             bindings = <
-&none   &kp GRAVE  &kp SQT   &kp DQT   &kp SLASH  &none  &none                                       &mo 3   &none  &none      &kp PLUS   &kp AT     &kp DOT    &none
-&none   &kp TILDE  &kp LBKT  &kp RBKT  &kp PRCNT  &none  &none                                       &none   &none  &kp HASH   &kp MINUS  &kp STAR   &kp QMARK  &none
-&none   &kp CARET  &kp LBRC  &kp RBRC  &kp DLLR   &none  &none   &trans  &trans      &trans  &trans  &none   &none  &kp EQUAL  &kp UNDER  &kp COLON  &kp EXCL   &none
-&none   &kp PIPE   &kp LPAR  &kp RPAR  &kp SEMI   &none                  &trans      &trans                  &none  &kp AMPS   &kp LT     &kp GT     &kp SLASH  &none
-&trans  &trans     &trans    &trans    &trans            &trans  &trans  &trans      &trans  &trans  &trans         &trans     &trans     &trans     &trans     &trans
+&none   &kp GRAVE  &kp SQT   &kp DQT   &kp SLASH  &none  &none                                          &mo 3   &none  &none      &kp PLUS   &kp AT     &kp DOT    &none
+&none   &kp TILDE  &kp LBKT  &kp RBKT  &kp PRCNT  &none  &none                                          &none   &none  &kp HASH   &kp MINUS  &kp STAR   &kp QMARK  &none
+&none   &kp CARET  &kp LBRC  &kp RBRC  &kp DLLR   &none  &kp PSCRN  &trans  &trans      &trans  &trans  &none   &none  &kp EQUAL  &kp UNDER  &kp COLON  &kp EXCL   &none
+&none   &kp PIPE   &kp LPAR  &kp RPAR  &kp SEMI   &none                     &trans      &trans                  &none  &kp AMPS   &kp LT     &kp GT     &kp SLASH  &none
+&trans  &trans     &trans    &trans    &trans            &trans     &trans  &trans      &trans  &trans  &trans         &trans     &trans     &trans     &trans     &trans
             >;
         };
 
