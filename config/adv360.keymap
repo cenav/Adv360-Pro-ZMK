@@ -146,11 +146,11 @@
         default {
             display-name = "Base";
             bindings = <
-&kp BSLH   &num1      &num2     &num3     &num4      &num5  &kp LC(C)                                                      &mo 3        &num6  &num7   &num8     &num9    &num0      &kp SLASH
-&kp GRAVE  &kp SQT    &com_min  &dot_und  &kp P      &kp Y  &kp LC(V)                                                      &kp INS      &kp F  &kp G   &kp C     &kp R    &kp L      &kp EQUAL
-&kp ESC    &kp A      &kp O     &kp E     &kp U      &kp I  &mkp LCLK  &kp LCTRL  &kp LALT      &kp LGUI  &kp RCTRL        &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
-&kp DEL    &kp SEMI   &kp Q     &kp J     &kp K      &kp X                        &mo 2         &mo 2                                   &kp B  &kp M   &kp W     &kp V    &kp Z      &caps_word
-&mo 1      &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT         &bspc_del  &kp LSHFT  &kp LGUI      &kp LALT  &mt RSHFT ENTER  &kp SPACE           &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo 1
+&kp BSLH    &num1      &num2     &num3     &num4      &num5  &kp LC(C)                                                      &mo 3        &num6  &num7   &num8     &num9    &num0      &kp SLASH
+&kp DEL     &kp SQT    &com_min  &dot_und  &kp P      &kp Y  &kp LC(V)                                                      &kp INS      &kp F  &kp G   &kp C     &kp R    &kp L      &kp INS
+&kp ESC     &kp A      &kp O     &kp E     &kp U      &kp I  &mkp LCLK  &kp LCTRL  &kp LALT      &kp LGUI  &kp RCTRL        &kp K_CMENU  &kp D  &kp H   &kp T     &kp N    &kp S      &kp TAB
+&caps_word  &kp SEMI   &kp Q     &kp J     &kp K      &kp X                        &mo 2         &mo 2                                   &kp B  &kp M   &kp W     &kp V    &kp Z      &caps_word
+&mo 1       &kp PG_UP  &kp HOME  &kp LEFT  &kp RIGHT         &bspc_del  &kp LSHFT  &kp LGUI      &kp LALT  &mt RSHFT ENTER  &kp SPACE           &kp UP  &kp DOWN  &kp END  &kp PG_DN  &mo 1
             >;
         };
 
@@ -169,7 +169,7 @@
             display-name = "Sym";
             bindings = <
 &none   &kp GRAVE  &kp SQT   &kp DQT   &kp SLASH  &none  &none                                          &mo 3   &none  &none      &kp PLUS   &kp AT     &kp DOT    &none
-&none   &kp TILDE  &kp LBKT  &kp RBKT  &kp PRCNT  &none  &none                                          &none   &none  &kp HASH   &kp MINUS  &kp STAR   &kp QMARK  &none
+&none   &kp TILDE  &kp LBKT  &kp RBKT  &kp PRCNT  &none  &kp CAPS                                       &none   &none  &kp HASH   &kp MINUS  &kp STAR   &kp QMARK  &none
 &none   &kp CARET  &kp LBRC  &kp RBRC  &kp DLLR   &none  &kp PSCRN  &trans  &trans      &trans  &trans  &none   &none  &kp EQUAL  &kp UNDER  &kp COLON  &kp EXCL   &none
 &none   &kp PIPE   &kp LPAR  &kp RPAR  &kp SEMI   &none                     &trans      &trans                  &none  &kp AMPS   &kp LT     &kp GT     &kp SLASH  &none
 &trans  &trans     &trans    &trans    &trans            &trans     &trans  &trans      &trans  &trans  &trans         &trans     &trans     &trans     &trans     &trans
