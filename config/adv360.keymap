@@ -168,11 +168,11 @@
         symbol {
             display-name = "Sym";
             bindings = <
-&none   &kp GRAVE  &kp SQT   &kp DQT   &kp SLASH  &none  &kp SCROLLLOCK                                      &mo 3   &none  &none      &kp PLUS   &kp AT     &kp DOT    &none
-&none   &kp TILDE  &kp LBKT  &kp RBKT  &kp PRCNT  &none  &kp CAPS                                            &none   &none  &kp HASH   &kp MINUS  &kp STAR   &kp EXCL   &none
-&none   &kp CARET  &kp LBRC  &kp RBRC  &kp DLLR   &none  &kp PSCRN       &trans  &trans      &trans  &trans  &none   &none  &kp EQUAL  &kp UNDER  &kp COLON  &kp QMARK  &none
-&none   &kp PIPE   &kp LPAR  &kp RPAR  &kp SEMI   &none                          &trans      &trans                  &none  &kp AMPS   &kp LT     &kp GT     &kp SLASH  &none
-&trans  &trans     &trans    &trans    &trans            &trans          &trans  &trans      &trans  &trans  &trans         &trans     &trans     &trans     &trans     &trans
+&none   &kp AT     &kp GRAVE  &kp SQT   &kp DQT    &none  &kp SCROLLLOCK                                      &mo 3   &none  &kp FSLH   &kp BSLH   &kp TILDE  &kp DOT    &none
+&none   &kp AMPS   &kp LPAR   &kp RPAR  &kp PRCNT  &none  &kp CAPS                                            &none   &none  &kp PRCNT  &kp MINUS  &kp PLUS   &kp EXCL   &none
+&none   &kp CARET  &kp LBRC   &kp RBRC  &kp DLLR   &none  &kp PSCRN       &trans  &trans      &trans  &trans  &none   &none  &kp EQUAL  &kp UNDER  &kp COLON  &kp QMARK  &none
+&none   &kp PIPE   &kp LBKT   &kp RBKT  &kp SEMI   &none                          &trans      &trans                  &none  &kp STAR   &kp LT     &kp GT     &kp HASH   &none
+&trans  &trans     &trans     &trans    &trans            &trans          &trans  &trans      &trans  &trans  &trans         &trans     &trans     &trans     &trans     &trans
             >;
         };
 
