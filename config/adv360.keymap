@@ -188,21 +188,21 @@
 
         RTS1 {
             bindings = <
-&kp ESC   &kp N1     &kp N2   &kp N3    &kp N4    &kp N5  &kp BSPC                                           &trans  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &trans
-&kp TAB   &kp Q      &kp W    &kp E     &kp R     &kp T   &kp Y                                              &to 0   &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
-&kp HOME  &kp A      &kp S    &kp D     &kp F     &kp G   &kp H     &kp LCTRL  &kp LALT      &trans  &trans  &trans  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&kp END   &kp Z      &kp X    &kp C     &kp V     &kp B                        &kp INS       &trans                  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-&mo 6     &kp COMMA  &kp DOT  &kp LBKT  &kp RBKT          &kp LALT  &kp LSHFT  &kp DEL       &trans  &trans  &trans          &trans  &trans     &trans   &trans    &trans
+&kp ESC   &kp N1         &kp N2  &kp N3  &kp N4  &kp N5  &kp BSPC                                           &trans  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &trans
+&kp TAB   &kp LC(LS(A))  &kp N6  &kp N7  &kp N8  &kp N9  &kp Y                                              &to 0   &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&kp HOME  &kp Q          &kp W   &kp E   &kp R   &kp T   &kp H     &kp LCTRL  &kp LALT      &trans  &trans  &trans  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp END   &kp A          &kp S   &kp D   &kp F   &kp G                        &kp INS       &trans                  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+&mo 6     &kp Z          &kp X   &kp C   &kp V           &mo 5     &kp LSHFT  &kp DEL       &trans  &trans  &trans          &trans  &trans     &trans   &trans    &trans
             >;
         };
 
         RTS2 {
             bindings = <
-&kp ESC   &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC                                           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y                                              &to 0   &trans  &trans  &trans  &trans  &trans  &trans
-&kp HOME  &kp A   &kp S   &kp D   &kp F   &kp G   &kp H     &kp LCTRL  &kp LALT      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp END   &kp Z   &kp X   &kp C   &kp V   &kp B                        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &kp F1  &kp F2  &kp F3  &kp F4          &to 4     &kp LSHFT  &trans        &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp ESC   &kp SEMI   &kp LS(DOT)  &kp DOT      &kp LS(DOT)  &kp N0     &kp BSPC                                           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB   &kp Q      &kp W        &kp E        &kp R        &kp T      &kp Y                                              &to 0   &trans  &trans  &trans  &trans  &trans  &trans
+&kp HOME  &kp LA(A)  &kp LA(S)    &kp LA(D)    &kp LA(F)    &kp LA(G)  &kp H     &kp LCTRL  &kp LALT      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp END   &kp Z      &kp X        &kp C        &kp V        &kp B                           &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp SEMI   &kp DOT      &kp LS(DOT)  &kp F4                  &trans    &kp LSHFT  &trans        &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
