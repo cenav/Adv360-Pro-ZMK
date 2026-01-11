@@ -211,8 +211,8 @@
 &kp ESC    &kp N5  &kp N1  &kp N2  &kp N3  &kp N4  &kp BSPC                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp TAB    &kp T   &kp Q   &kp W   &kp E   &kp R   &kp Y                                               &to 0   &trans  &trans  &trans  &trans  &trans  &trans
 &kp ENTER  &kp G   &kp A   &kp S   &kp D   &kp F   &kp H      &kp LCTRL  &kp LALT      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp B   &kp Z   &kp X   &kp C   &kp V                         &kp HOME      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp F1  &kp F2  &kp F3  &kp F4          &kp SPACE  &kp LSHFT  &kp END       &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp RSHFT  &kp B   &kp Z   &kp X   &kp C   &kp V                         &kp HOME      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp RCTRL  &kp F1  &kp F2  &kp F3  &kp F4          &kp SPACE  &kp LSHFT  &kp END       &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
