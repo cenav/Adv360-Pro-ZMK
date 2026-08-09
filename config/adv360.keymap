@@ -208,21 +208,21 @@
 
         FPS1 {
             bindings = <
-&kp ENTER   &kp N5  &kp N1  &kp N2  &kp N3  &kp N4  &kp BSPC                                              &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-&kp TAB     &kp T   &kp Q   &kp W   &kp E   &kp R   &kp TAB                                               &none   &trans  &trans  &trans  &trans  &trans  &trans
-&kp ESC     &kp G   &kp A   &kp S   &kp D   &kp F   &kp ESC    &kp LCTRL  &kp LALT        &trans  &trans  &none   &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHIFT  &kp B   &kp Z   &kp X   &kp C   &kp V                         &kp ESCAPE      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RCTRL   &kp F1  &kp F2  &kp F3  &kp F4          &kp SPACE  &mo 7      &kp END         &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp ENTER  &kp P      &kp Y  &kp O  &kp I  &kp U  &kp BSPC                                            &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+&kp T      &kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp N                                               &none   &trans  &trans  &trans  &trans  &trans  &trans
+&kp G      &kp ESC    &kp A  &kp S  &kp D  &kp F  &kp M      &kp LCTRL  &kp LALT      &trans  &trans  &none   &trans  &trans  &trans  &trans  &trans  &trans
+&kp B      &kp LCTRL  &kp Z  &kp X  &kp C  &kp V                        &kp HOME      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp RCTRL  &kp H      &kp J  &kp K  &kp L         &kp SPACE  &mo 7      &kp END       &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         FPS2 {
             bindings = <
-&kp ENTER  &kp N0         &kp N6  &kp N7  &kp N8     &kp N9      &kp BSPC                                            &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-&kp TAB    &kp P          &kp Y   &kp U   &kp I      &kp O       &none                                               &none   &trans  &trans  &trans  &trans  &trans  &trans
-&kp ESC    &kp SEMICOLON  &kp H   &kp J   &kp K      &kp L       &none      &kp LCTRL  &kp LALT      &trans  &trans  &none   &trans  &trans  &trans  &trans  &trans  &trans
-&kp RSHFT  &kp SLASH      &kp N   &kp M   &kp COMMA  &kp PERIOD                        &kp HOME      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RCTRL  &kp F5         &kp F6  &kp F7  &kp F8                 &kp SPACE  &trans     &kp END       &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp ENTER  &kp F5    &kp F1     &kp F2      &kp F3     &kp F4  &kp BSPC                                            &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+&kp TAB    &kp N0    &kp N6     &kp N7      &kp N8     &kp N9  &none                                               &none   &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC    &kp N5    &kp N1     &kp N2      &kp N3     &kp N4  &none      &kp LCTRL  &kp LALT      &trans  &trans  &none   &trans  &trans  &trans  &trans  &trans  &trans
+&kp RSHFT  &kp F10   &kp F6     &kp F7      &kp F8     &kp F9                        &kp HOME      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp RCTRL  &kp SEMI  &kp COMMA  &kp PERIOD  &kp SLASH          &kp SPACE  &trans     &kp END       &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
