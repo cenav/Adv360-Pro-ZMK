@@ -208,11 +208,11 @@
 
         FPS1 {
             bindings = <
-&kp ENTER  &kp P      &kp Y  &kp O  &kp I  &kp U  &kp BSPC                                            &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-&kp T      &kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp N                                               &none   &trans  &trans  &trans  &trans  &trans  &none
-&kp G      &kp ESC    &kp A  &kp S  &kp D  &kp F  &kp M      &kp LCTRL  &kp LALT      &trans  &trans  &none   &trans  &trans  &trans  &trans  &trans  &trans
-&kp B      &kp LCTRL  &kp Z  &kp X  &kp C  &kp V                        &kp HOME      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RCTRL  &kp H      &kp J  &kp K  &kp L         &kp SPACE  &mo 7      &kp END       &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp ENTER   &kp P  &kp Y  &kp O  &kp I  &kp U  &kp BSPC                                            &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+&kp TAB     &kp T  &kp Q  &kp W  &kp E  &kp R  &kp N                                               &none   &trans  &trans  &trans  &trans  &trans  &none
+&kp ESCAPE  &kp G  &kp A  &kp S  &kp D  &kp F  &kp M      &kp LCTRL  &kp LALT      &trans  &trans  &none   &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHIFT  &kp B  &kp Z  &kp X  &kp C  &kp V                        &kp HOME      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp RCTRL   &kp H  &kp J  &kp K  &kp L         &kp SPACE  &mo 7      &kp END       &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
